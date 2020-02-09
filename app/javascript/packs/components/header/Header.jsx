@@ -1,16 +1,19 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
+import NavigationToggle from "./NavigationToggle";
 
-export default class Header extends Component {
-	constructor(props) {
-		super(props);
+export default function Header() {
+	const [navigationActive, setNavigationActive] = useState(false);
+
+	function toggleNavigation() {
+		setNavigationActive(!navigationActive);
+		console.log(navigationActive);
 	}
 
-	render() {
-		return (
-			<div className="header-container">
-				<Navigation />
-			</div>
-		);
-	}
+	return (
+		<div className="header-container">
+			<NavigationToggle toggleNavigation={toggleNavigation} />
+			<Navigation navigationActive={navigationActive} />
+		</div>
+	);
 }
