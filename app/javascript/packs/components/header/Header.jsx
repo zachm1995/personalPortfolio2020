@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navigation from "./Navigation";
-import NavigationToggle from "./NavigationToggle";
+import Navigation from "./navigation/Navigation";
+import NavigationToggle from "./navigation/NavigationToggle";
 
 export default function Header() {
 	const [navigationActive, setNavigationActive] = useState(false);
@@ -12,7 +12,7 @@ export default function Header() {
 
 	return (
 		<div className="header-container">
-			<NavigationToggle toggleNavigation={toggleNavigation} />
+			<NavigationToggle toggleNavigation={toggleNavigation} navigationActive={navigationActive} />
 			<Navigation navigationActive={navigationActive} />
 		</div>
 	);

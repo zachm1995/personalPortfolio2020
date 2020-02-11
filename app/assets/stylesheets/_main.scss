@@ -1,0 +1,16 @@
+// Body Reset
+@import './variables';
+
+body {
+	margin: 0px;
+	padding-top: $header-height;
+}
+
+// Links
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
+}

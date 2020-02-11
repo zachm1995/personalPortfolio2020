@@ -1,0 +1,116 @@
+// Styles regarding the header component
+@import './variables';
+
+.header-container {
+	display: flex;
+	height: $header-height;
+	background-color: $header-background;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-sizing: border-box;
+	color: $white;
+}
+
+// Navigation Toggle Button
+.navigation-toggle {
+	width: 80px;
+	height: 40px;
+	z-index: 10;
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	box-sizing: border-box;
+	transition: 1.5s;
+	& > span {
+		display: block;
+		transition: 1.5s;
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-radius: 20px;
+			height: 2px;
+			background-color: $white;
+			transform: rotate(0deg);
+			position: absolute;
+			right: 0px;
+		}
+		&:nth-child(1) {
+			width: 100%;
+			top: 0%;
+		}
+		&:nth-child(2) {
+			width: 80%;
+			top: 50%;
+		}
+		&:nth-child(3) {
+			width: 60%;
+			top: 100%;
+		}
+	}
+	&.active {
+		width: 48px;
+		height: 48px;
+		& > span {
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3) {
+				background-color: $crimson;
+				right: 0%;
+			}
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: 50%;
+			}
+			&:nth-child(2) {
+				width: 0%;
+				transition: .5s;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				top: 50%;
+				width: 100%;
+				// transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+// Navigation Menu
+.navigation-menu-container {
+	display: flex;
+	font-family: $font-primary;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	z-index: 9;
+	transition: 1.5s;
+	transition-timing-function: $ease-timing;
+	background-color: $slate;
+	color: $white;
+	font-size: 2em;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	&.active {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+
+	// Navigation Menu Items
+	& > .navigation-items-container {
+		max-width: 80%;
+		margin: 0 auto;
+		& > .navigation-menu-item {
+			font-size: 1.5em;
+			margin-bottom: 40px;
+			transition: 1.5s;
+			padding: 20px;
+			background-position: -100%;
+			&:hover {
+				background-color: black;
+				background-position: 100%;
+			}
+		}
+	}
+}
