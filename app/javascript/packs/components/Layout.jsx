@@ -2,16 +2,20 @@ import React, { Component } from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Background from "./Background";
+import Landing from "./Landing";
 
-export default class Layout extends Component {
-	render() {
-		return (
-			<div>
-				<Background />
-				<Header />
-				{this.props.children}
-				<Footer />
-			</div>
-		);
-	}
+export default function Layout(props) {
+	// TODO: CSS MODULES TO MAKE THIS DYNAMIC; HARD VALUE DEFINED IN SCSS VARIABLES
+	const headerHeight = 100;
+	const footerHeight = 200;
+
+	return (
+		<div>
+			<Background />
+			<Header/>
+			<Landing headerHeight={headerHeight} footerHeight={footerHeight}/>
+			{props.children}
+			<Footer />
+		</div>
+	);
 }

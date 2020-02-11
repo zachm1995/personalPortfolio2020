@@ -104,12 +104,11 @@
 		& > .navigation-menu-item {
 			font-size: 1.5em;
 			margin-bottom: 40px;
-			transition: 1.5s;
-			padding: 20px;
-			background-position: -100%;
+			transition: 3s;
+			padding: 20px 100px;
 			&:hover {
-				background-color: black;
-				background-position: 100%;
+				color: $grey;
+				@include rich-purple-gradient-background;
 			}
 		}
 	}

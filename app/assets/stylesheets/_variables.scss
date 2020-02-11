@@ -7,7 +7,7 @@ $transparent: rgba(0, 0, 0, 0);
 
 // Typefaces
 $font-primary: 'Raleway', sans-serif;
-$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
 
 // Header Settings
 $header-height: 100px;
@@ -19,22 +19,19 @@ $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
 @mixin rich-purple-gradient-background {
 	background: linear-gradient(292deg, #6000ff, #191919);
 	background-size: 400% 400%;
+	animation: richPurpleGradient 5s ease infinite;
 
-	-webkit-animation: AnimationName 11s ease infinite;
-	-moz-animation: AnimationName 11s ease infinite;
-	animation: AnimationName 11s ease infinite;
-
-	@-webkit-keyframes AnimationName {
+	@-webkit-keyframes richPurpleGradient {
 		0%{background-position:0% 50%}
 		50%{background-position:100% 51%}
 		100%{background-position:0% 50%}
 	}
-	@-moz-keyframes AnimationName {
+	@-moz-keyframes richPurpleGradient {
 		0%{background-position:0% 50%}
 		50%{background-position:100% 51%}
 		100%{background-position:0% 50%}
 	}
-	@keyframes AnimationName {
+	@keyframes richPurpleGradient {
 		0%{background-position:0% 50%}
 		50%{background-position:100% 51%}
 		100%{background-position:0% 50%}

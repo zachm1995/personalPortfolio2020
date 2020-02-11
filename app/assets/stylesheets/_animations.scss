@@ -1,0 +1,22 @@
+// From Daniel Eden's animate.css library
+
+.animate {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -50, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}

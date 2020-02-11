@@ -1,0 +1,26 @@
+.landing-page-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& > .landing-page-centered {
+		& > div:nth-child(1){
+			font-family: $font-secondary;
+			text-transform: uppercase;
+			font-variant: small-caps;
+			padding: 20px 40px;
+			background-color: $white;
+			color: $slate;
+			font-size: 2em;
+			text-align: center
+		}	
+		& > div:nth-child(2) {
+			padding: 20px 40px;
+			color: $white;
+			font-size: 1.2em;
+			font-family: $font-primary;
+			text-transform: lowercase;
+			font-style: italic;
+			text-align: center;
+		}
+	}
+}
