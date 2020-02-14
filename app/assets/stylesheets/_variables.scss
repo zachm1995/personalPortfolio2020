@@ -1,13 +1,13 @@
 // Colors
-$white: #FFFFFF;
-$grey: #7F7F7F;
+$white: #ffffff;
+$grey: #7f7f7f;
 $slate: #191919;
 $crimson: #ba2525;
 $transparent: rgba(0, 0, 0, 0);
 
 // Typefaces
-$font-primary: 'Raleway', sans-serif;
-$font-secondary: 'Montserrat', sans-serif;
+$font-primary: "Raleway", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
 
 // Header Settings
 $header-height: 100px;
@@ -15,15 +15,33 @@ $header-background: $transparent;
 
 // Animation
 $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
+$ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 
 @mixin rich-purple-gradient-background {
-	background: linear-gradient(292deg, #8E2DE2, #191919, #6000ff, #191919, #6441a5, #191919, #2a0845, #191919, #4A00E0);
+	background: linear-gradient(
+		292deg,
+		#8e2de2,
+		#191919,
+		#6000ff,
+		#191919,
+		#6441a5,
+		#191919,
+		#2a0845,
+		#191919,
+		#4a00e0
+	);
 	background-size: 4000% 4000%;
 	animation: richPurpleGradient 50s ease infinite;
 
 	@keyframes richPurpleGradient {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 51%}
-		100%{background-position:0% 50%}
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 51%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 }
