@@ -17,20 +17,10 @@ $header-background: $transparent;
 $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
 
 @mixin rich-purple-gradient-background {
-	background: linear-gradient(292deg, #6000ff, #191919);
-	background-size: 400% 400%;
-	animation: richPurpleGradient 5s ease infinite;
+	background: linear-gradient(292deg, #8E2DE2, #191919, #6000ff, #191919, #6441a5, #191919, #2a0845, #191919, #4A00E0);
+	background-size: 4000% 4000%;
+	animation: richPurpleGradient 50s ease infinite;
 
-	@-webkit-keyframes richPurpleGradient {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 51%}
-		100%{background-position:0% 50%}
-	}
-	@-moz-keyframes richPurpleGradient {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 51%}
-		100%{background-position:0% 50%}
-	}
 	@keyframes richPurpleGradient {
 		0%{background-position:0% 50%}
 		50%{background-position:100% 51%}

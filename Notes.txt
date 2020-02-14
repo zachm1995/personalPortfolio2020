@@ -1,0 +1,8 @@
+Cubic Bezier and Tranform Animation
+
+// transition: transform .8s cubic-bezier(.5,0,0,1);
+// transition-delay: .9s;
+// transform: translate3d(0, 50%, 0);
+// &.active {
+// 	transform: translateZ(0);
+// }

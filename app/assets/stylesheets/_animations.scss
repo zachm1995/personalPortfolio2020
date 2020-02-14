@@ -1,7 +1,7 @@
 // From Daniel Eden's animate.css library
 
 .animate {
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 
@@ -17,6 +17,6 @@
   }
 }
 
-.fadeInUp {
-  animation-name: fadeInUp;
+.fadeUp {
+  animation-name: fadeUp;
 }

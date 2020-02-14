@@ -87,7 +87,7 @@
 	height: 100vh;
 	width: 100vw;
 	z-index: 9;
-	transition: 1.5s;
+	transition: .5s;
 	transition-timing-function: $ease-timing;
 	background-color: $slate;
 	color: $white;
@@ -97,18 +97,27 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	}
 
-	// Navigation Menu Items
+	// Navigation Menu Items Container
 	& > .navigation-items-container {
 		max-width: 80%;
 		margin: 0 auto;
+
+		// Navigation Menu Items
 		& > .navigation-menu-item {
-			font-size: 1.5em;
-			margin-bottom: 40px;
-			transition: 3s;
-			padding: 20px 100px;
+			font-size: 1em;
+			text-transform: lowercase;
+			margin-bottom: 20px;
+			padding: 10px 50px;
+			transition: 1.5s;
+			text-align: center;
+			@for $i from 1 to 10 {
+				&:nth-child(#{$i}) {
+					animation-delay: #{.3 + ($i * .5)}s;
+				}
+			}
+
 			&:hover {
 				color: $grey;
-				@include rich-purple-gradient-background;
 			}
 		}
 	}
