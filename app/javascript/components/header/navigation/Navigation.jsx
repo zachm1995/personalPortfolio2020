@@ -3,6 +3,7 @@ import NavigationItem from "./NavigationItem";
 import { useMousePosition } from "../../../custom_hooks/useMousePosition";
 
 export default function Navigation(props) {
+	// TODO: EXTRACT BACKGROUND IN SEPARATE ELEMENT
 	const mousePosition = useMousePosition();
 	const [backgroundPosition, setBackgroundPosition] = useState({});
 
