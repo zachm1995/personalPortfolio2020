@@ -4,58 +4,54 @@ import { useMousePosition } from "../../../../custom_hooks/useMousePosition";
 
 export default function Navigation(props) {
 	const mousePosition = useMousePosition();
+	const [backgroundPosition, setBackgroundPosition]= useState({});
 
 	const navigationItems = [
-		{
-			title: "Home"
-		},
-		{
-			title: "about"
-		},
-		{
-			title: "something"
-		},
-		{
-			title: "contact"
-		},
-		{
-			title: "another"
-		},
-		{
-			title: "secondtolast"
-		},
-		{
-			title: "last"
-		}
+	{
+		title: "Home"
+	},
+	{
+		title: "About"
+	},
+	{
+		title: "Projects"
+	},
+	{
+		title: "Contact"
+	},
 	];
 
-	function handleMouseOver(event) {
-		console.log(mousePosition);
+	useEffect(() => {
+	}, []);
 
+	function handleMouseMove() {
+		let mouseX = mousePosition['x'];
+		let mouseY = mousePosition['y'];
+		let backgroundX = (mouseX/window.innerWidth) * .2 * 100;
+		let backgroundY = (mouseY/window.innerHeight) * .2 * 100;
+		setBackgroundPosition({x: backgroundX, y: backgroundY});
+		console.log(backgroundX + ' ' + mouseX);
 	}
-
-	const navigationStyle = {
-
-	};
 
 	return (
 		<div
-			className={
-				"navigation-menu-container " +
-				(props.navigationActive ? "active" : "")
-			}
-			onMouseOver={handleMouseOver}
+		className={
+			"navigation-menu-container " +
+			(props.navigationActive ? "active" : "")
+		}
+		onMouseMove={handleMouseMove}
+		style={{backgroundPosition: backgroundPosition['x'] + '% ' + backgroundPosition['y'] + '%'}}
 		>
-			<div className="navigation-items-container">
-				{navigationItems.map((item, index) => {
-					return (
-						<NavigationItem
-							title={item.title}
-							navigationActive={props.navigationActive}
-						/>
-					);
-				})}
-			</div>
+		<div className="navigation-items-container">
+		{navigationItems.map((item, index) => {
+			return (
+				<NavigationItem
+				title={item.title}
+				navigationActive={props.navigationActive}
+				/>
+				);
+		})}
 		</div>
-	);
+		</div>
+		);
 }

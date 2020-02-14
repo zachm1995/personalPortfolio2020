@@ -7,7 +7,6 @@ export default function Header() {
 
 	function toggleNavigation() {
 		setNavigationActive(!navigationActive);
-		console.log(navigationActive);
 	}
 
 	return (
