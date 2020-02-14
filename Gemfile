@@ -41,9 +41,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  # Favicon
-  gem 'rails_real_favicon'
-
 end
 
 
