@@ -21,6 +21,7 @@ export default function Index(props) {
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}
+				navigationLoaded={navigationLoaded}
 			/>
 			{!navigationActive && (
 				<Landing

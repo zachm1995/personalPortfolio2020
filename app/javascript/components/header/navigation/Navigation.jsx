@@ -29,14 +29,7 @@ export default function Navigation(props) {
 		let backgroundX = (mouseX / window.innerWidth) * 0.2 * 100;
 		let backgroundY = (mouseY / window.innerHeight) * 0.2 * 100;
 		setBackgroundPosition({ x: backgroundX, y: backgroundY });
-		console.log(backgroundX + " " + mouseX);
 	}
-
-	const navigationStyle = {
-		backgroundPosition:
-			backgroundPosition["x"] + "% " + backgroundPosition["y"] + "%"
-	};
-
 	return (
 		<div
 			className={
@@ -44,7 +37,13 @@ export default function Navigation(props) {
 				(props.navigationActive ? "active" : "")
 			}
 			onMouseMove={handleMouseMove}
-			style={navigationStyle}
+			style={{
+				backgroundPosition:
+					backgroundPosition["x"] +
+					"% " +
+					backgroundPosition["y"] +
+					"%"
+			}}
 		>
 			<div className="navigation-items-container">
 				{navigationItems.map((item, index) => {

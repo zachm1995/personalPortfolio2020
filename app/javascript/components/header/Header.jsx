@@ -9,6 +9,7 @@ export default function Header(props) {
 			<NavigationToggle
 				toggleNavigation={props.toggleNavigation}
 				navigationActive={props.navigationActive}
+				navigationLoaded={props.navigationLoaded}
 			/>
 			<Navigation navigationActive={props.navigationActive} />
 		</div>
