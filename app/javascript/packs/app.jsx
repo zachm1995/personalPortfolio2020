@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import Layout from "./components/Layout";
+import Index from "../components/Index";
 
 document.addEventListener("DOMContentLoaded", () => {
 	ReactDOM.render(
-		<Layout />,
+		<Index />,
 		document.body.appendChild(document.createElement("div"))
 	);
 });

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Typed from "react-typed";
 
 export default function Landing(props) {
 	const [height, setHeight] = useState(
 		window.innerHeight - props.headerHeight - props.footerHeight
 	);
+
+	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () =>
@@ -16,11 +19,19 @@ export default function Landing(props) {
 		};
 	}, []);
 
+	useEffect(() => {
+		setLoaded(true);
+	}, []);
+
 	return (
 		<div className="landing-page-container" style={{ height: height }}>
 			<div className="landing-page-centered">
-				<div>Zach Mumbauer</div>
-				<div>design, development, orchestration</div>
+				<div className={loaded ? "animate fadeDown" : ""}>
+					Zach Mumbauer
+				</div>
+				<div>
+					<Typed strings={["Tech-centric pantologist"]} typeSpeed={40} startDelay={1200} />
+				</div>
 			</div>
 		</div>
 	);

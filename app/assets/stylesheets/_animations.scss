@@ -1,8 +1,10 @@
-// From Daniel Eden's animate.css library
+// Modified from Daniel Eden's animate.css library
+@import 'variables';
 
 .animate {
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-fill-mode: both;
+  animation-timing-function: $ease-timing-alt;
 }
 
 @keyframes fadeUp {
@@ -19,4 +21,36 @@
 
 .fadeUp {
   animation-name: fadeUp;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeLeft {
+  animation-name: fadeLeft;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeDown {
+  animation-name: fadeDown;
 }
