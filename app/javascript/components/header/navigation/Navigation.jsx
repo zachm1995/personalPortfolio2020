@@ -3,7 +3,6 @@ import NavigationItem from "./NavigationItem";
 import { useMousePosition } from "../../../custom_hooks/useMousePosition";
 
 export default function Navigation(props) {
-	// TODO: EXTRACT BACKGROUND IN SEPARATE ELEMENT
 	const mousePosition = useMousePosition();
 	const [backgroundPosition, setBackgroundPosition] = useState({});
 
@@ -38,14 +37,17 @@ export default function Navigation(props) {
 				(props.navigationActive ? "active" : "")
 			}
 			onMouseMove={handleMouseMove}
-			style={{
-				backgroundPosition:
-					backgroundPosition["x"] +
-					"% " +
-					backgroundPosition["y"] +
-					"%"
-			}}
 		>
+			<div
+				className="navigation-menu-background-overlay"
+				style={{
+					backgroundPosition:
+						backgroundPosition["x"] +
+						"% " +
+						backgroundPosition["y"] +
+						"%"
+				}}
+			></div>
 			<div className="navigation-items-container">
 				{navigationItems.map((item, index) => {
 					return (
