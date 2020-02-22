@@ -8,16 +8,20 @@ export default function Navigation(props) {
 
 	const navigationItems = [
 		{
-			title: "Home"
+			title: "Home",
+			link: 'landing'
 		},
 		{
-			title: "About"
+			title: "About",
+			link: 'about'
 		},
 		{
-			title: "Projects"
+			title: "Projects",
+			link: 'portfolio'
 		},
 		{
-			title: "Contact"
+			title: "Contact",
+			link: 'contact'
 		}
 	];
 
@@ -26,8 +30,8 @@ export default function Navigation(props) {
 	function handleMouseMove() {
 		let mouseX = mousePosition["x"];
 		let mouseY = mousePosition["y"];
-		let backgroundX = (mouseX / window.innerWidth) * 0.2 * 100;
-		let backgroundY = (mouseY / window.innerHeight) * 0.2 * 100;
+		let backgroundX = (mouseX / window.innerWidth) * 0.1 * 100;
+		let backgroundY = (mouseY / window.innerHeight) * 0.1 * 100;
 		setBackgroundPosition({ x: backgroundX, y: backgroundY });
 	}
 	return (
@@ -53,8 +57,10 @@ export default function Navigation(props) {
 					return (
 						<NavigationItem
 							title={item.title}
+							link={item.link}
 							navigationActive={props.navigationActive}
 							key={index}
+							handlePageChange={props.handlePageChange}
 						/>
 					);
 				})}

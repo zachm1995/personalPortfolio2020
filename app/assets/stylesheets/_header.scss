@@ -20,8 +20,8 @@
 	height: 40px;
 	z-index: 10;
 	position: fixed;
-	top: 40px;
-	right: 40px;
+	top: 60px;
+	right: 60px;
 	box-sizing: border-box;
 	transition: 1.5s;
 	& > span {
@@ -127,10 +127,13 @@
 					animation-delay: #{.3 + ($i * .5)}s;
 				}
 			}
-
-			&:hover {
-				color: $grey;
+			& > span {
+				&:hover {
+					color: $grey;
+					cursor: crosshair;
+				}
 			}
+			
 		}
 	}
 }

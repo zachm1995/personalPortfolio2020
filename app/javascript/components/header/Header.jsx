@@ -3,7 +3,6 @@ import Navigation from "./navigation/Navigation";
 import NavigationToggle from "./navigation/NavigationToggle";
 
 export default function Header(props) {
-
 	return (
 		<div className="header-container">
 			<NavigationToggle
@@ -11,7 +10,10 @@ export default function Header(props) {
 				navigationActive={props.navigationActive}
 				navigationLoaded={props.navigationLoaded}
 			/>
-			<Navigation navigationActive={props.navigationActive} />
+			<Navigation
+				navigationActive={props.navigationActive}
+				handlePageChange={props.handlePageChange}
+			/>
 		</div>
 	);
 }

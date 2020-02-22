@@ -1,10 +1,12 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Background from "./Background";
-import Landing from "./Landing";
+import Landing from "./pages/Landing";
+import About from "./pages/About";
 
 export default function Index(props) {
+	const [currentPage, setCurrentPage] = useState("landing");
 	const [navigationActive, setNavigationActive] = useState(false);
 
 	function toggleNavigation() {
@@ -15,20 +17,30 @@ export default function Index(props) {
 	const headerHeight = 100;
 	const footerHeight = 0;
 
+	function handlePageChange(page) {
+		setCurrentPage(page);
+		toggleNavigation();
+	}
+
+
 	return (
 		<div>
 			<Background />
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}
+				handlePageChange={handlePageChange}
 			/>
-			{!navigationActive && (
+			{currentPage == "landing" && !navigationActive && (
 				<Landing
 					headerHeight={headerHeight}
 					footerHeight={footerHeight}
 				/>
 			)}
-			{props.children}
+
+			{currentPage == "about" && !navigationActive && (
+				<About />
+			)}
 		</div>
 	);
 }
