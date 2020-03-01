@@ -1,11 +1,11 @@
-@import 'variables';
+@import "variables";
 
 .landing-page-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	& > .landing-page-centered {
-		& > div:nth-child(1){
+		& > div:nth-child(1) {
 			font-family: $font-secondary;
 			text-transform: uppercase;
 			font-variant: small-caps;
@@ -14,7 +14,7 @@
 			color: $slate;
 			font-size: 4em;
 			text-align: center;
-		}	
+		}
 		& > div:nth-child(2) {
 			padding: 10px 20px;
 			color: $white;
@@ -23,6 +23,19 @@
 			text-transform: lowercase;
 			font-style: italic;
 			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.landing-page-container {
+		& > .landing-page-centered {
+			& > div:nth-child(1) {
+				font-size: 2em;
+			}
+			& > div:nth-child(2) {
+				font-size: 2em;
+			}
 		}
 	}
 }

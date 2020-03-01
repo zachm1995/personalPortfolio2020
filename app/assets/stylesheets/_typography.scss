@@ -14,3 +14,12 @@ h1 {
 	font-size: 2em;
 	color: white;
 }
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: 4em;
+	}
+	p {
+		font-size: 1.6em;
+	}
+}
