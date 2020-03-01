@@ -4,6 +4,7 @@
 body {
 	margin: 0px;
 	padding-top: $header-height;
+	font-size: 14px;
 }
 
 // Links
@@ -12,5 +13,12 @@ a {
 	color: inherit;
 	&:hover {
 		color: inherit;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	body {
+		font-size: 5px;
 	}
 }

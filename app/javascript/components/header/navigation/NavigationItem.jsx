@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 export default function NavigationItem(props) {
+	const [itemActive, setItemActive] = useState(false);
+
 	return (
 		<div
 			className={
@@ -10,8 +12,22 @@ export default function NavigationItem(props) {
 			onClick={() => {
 				props.handlePageChange(props.link);
 			}}
+			onMouseEnter={() => {
+				props.handleItemHover(true);
+				setItemActive(true);
+			}}
+			onMouseLeave={() => {
+				props.handleItemHover(false);
+				setItemActive(false);
+			}}
 		>
-				<span>{props.title}</span>
+			<span
+				className={
+					(itemActive ? "nav-item-active " : "")
+				}
+			>
+				{props.title}
+			</span>
 		</div>
 	);
 }

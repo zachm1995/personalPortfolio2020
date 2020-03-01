@@ -1,5 +1,5 @@
-// Styles regarding the header component
-@import './variables';
+/* Styles regarding the header component */
+@import "./variables";
 
 .header-container {
 	display: flex;
@@ -14,16 +14,19 @@
 	color: $white;
 }
 
-// Navigation Toggle Button
+/* Navigation Toggle Button */
 .navigation-toggle {
 	width: 80px;
 	height: 40px;
 	z-index: 10;
 	position: fixed;
-	top: 60px;
-	right: 60px;
+	top: 30px;
+	right: 30px;
 	box-sizing: border-box;
 	transition: 1.5s;
+	&:hover {
+		cursor: crosshair;
+	}
 	& > span {
 		display: block;
 		transition: 1.5s;
@@ -51,8 +54,8 @@
 		}
 	}
 	&.active {
-		width: 48px;
-		height: 48px;
+		width: 35px;
+		height: 35px;
 		& > span {
 			&:nth-child(1),
 			&:nth-child(2),
@@ -66,7 +69,7 @@
 			}
 			&:nth-child(2) {
 				width: 0%;
-				transition: .5s;
+				transition: 0.5s;
 			}
 			&:nth-child(3) {
 				transform: rotate(-45deg);
@@ -78,62 +81,110 @@
 	}
 }
 
-// Navigation Menu
+/* Navigation Menu */
 .navigation-menu-container {
 	display: flex;
 	font-family: $font-primary;
 	align-items: center;
 	justify-content: center;
+	padding: 20px;
 	height: 100vh;
 	width: 100vw;
 	z-index: 8;
-	transition: .8s $ease-timing;
+	transition: 0.8s $ease-timing;
 	background-color: $slate;
-	color: $white;
+	color: $grey;
 	font-size: 2em;
-	clip-path: polygon(0 0, 0% 0, -25% 25%, -50% 50%, -75% 75%, -100% 100%, 0 100%, 0 75%, 0 50%, 0 25%);
+	box-sizing: border-box;
+	clip-path: polygon(
+		0 0,
+		0% 0,
+		-25% 25%,
+		-50% 50%,
+		-75% 75%,
+		-100% 100%,
+		0 100%,
+		0 75%,
+		0 50%,
+		0 25%
+	);
 	&.active {
-		clip-path: polygon(0 0, 100% 0, 100% 25%, 100% 50%, 100% 75%, 100% 100%, 0 100%, 0 75%, 0 50%, 0 25%);
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% 25%,
+			100% 50%,
+			100% 75%,
+			100% 100%,
+			0 100%,
+			0 75%,
+			0 50%,
+			0 25%
+		);
 	}
-	& > .navigation-menu-background-overlay {
-		background-image: image-url('zm_tile.svg');
-		background-repeat: repeat;
-		transition: 0s;
-		transition-timing-function: ease;
-		z-index: 9;
-		width: 100%;
+	& > .navigation-menu-left,
+	& > .navigation-menu-right {
+		display: inline-block;
+		width: 50%;
 		height: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
 	}
-	// Navigation Menu Items Container
-	& > .navigation-items-container {
-		padding: 40px;
-		z-index: 10;
+	& > .navigation-menu-left {
+		background-color: $grey;
+		& > .navigation-menu-background-overlay {
+			background-image: image-url("zm_tile.svg");
+			background-repeat: repeat;
+			transition: 0s;
+			transition-timing-function: ease;
+			z-index: 9;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	& > .navigation-menu-right {
 		@include rich-purple-gradient-background();
-
-		// Navigation Menu Items
-		& > .navigation-menu-item {
-			font-size: 3em;
-			text-transform: lowercase;
-			margin-bottom: 20px;
-			padding: 10px 50px;
-			transition: 1.5s;
-			text-align: center;
-			animation-timing-function: $ease-timing-alt;
-			@for $i from 1 to 10 {
-				&:nth-child(#{$i}) {
-					animation-delay: #{.3 + ($i * .5)}s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* Navigation Menu Items Container */
+		& > .navigation-items-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			/* Navigation Menu Items */
+			& > .navigation-menu-item {
+				font-size: 3em;
+				text-transform: lowercase;
+				transition: 1.5s;
+				text-align: center;
+				animation-timing-function: $ease-timing-alt;
+				@for $i from 1 to 10 {
+					&:nth-child(#{$i}) {
+						animation-delay: #{0.3 + ($i * 0.5)}s;
+					}
 				}
-			}
-			& > span {
-				&:hover {
-					color: $grey;
+				& > span.nav-item-active {
+					color: $white;
 					cursor: crosshair;
 				}
+				& > span.nav-item-inactive {
+					color: blue;
+				}
 			}
-			
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.navigation-menu-container {
+		color: $white;
+		& > .navigation-menu-left {
+			width: 0%;
+		}
+		& > .navigation-menu-right {
+			width: 100%;
 		}
 	}
 }

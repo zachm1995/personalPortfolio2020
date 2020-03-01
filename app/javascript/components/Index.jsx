@@ -23,7 +23,7 @@ export default function Index(props) {
 
 	return (
 		<div>
-			<Background />
+			<Background navigationActive={navigationActive} />
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}
