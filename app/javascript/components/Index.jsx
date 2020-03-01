@@ -12,8 +12,6 @@ export default function Index(props) {
 	function toggleNavigation() {
 		setNavigationActive(!navigationActive);
 	}
-
-	// TODO: CSS MODULES TO MAKE THIS DYNAMIC; HARD VALUE DEFINED IN SCSS VARIABLES
 	const headerHeight = 100;
 	const footerHeight = 0;
 

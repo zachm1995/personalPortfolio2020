@@ -30,8 +30,8 @@ export default function Navigation(props) {
 	function handleMouseMove() {
 		let mouseX = mousePosition["x"];
 		let mouseY = mousePosition["y"];
-		let backgroundX = (mouseX / window.innerWidth) * 0.1 * 100;
-		let backgroundY = (mouseY / window.innerHeight) * 0.1 * 100;
+		let backgroundX = (mouseX / window.innerWidth) * 0.1 * 1000;
+		let backgroundY = (mouseY / window.innerHeight) * 0.1 * 1000;
 		setBackgroundPosition({ x: backgroundX, y: backgroundY });
 	}
 	return (
