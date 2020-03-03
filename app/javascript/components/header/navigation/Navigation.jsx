@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import NavigationItem from "./NavigationItem";
 import { useMousePosition } from "../../../custom_hooks/useMousePosition";
+import { useScreenSize } from "../../../custom_hooks/useScreenSize";
 
 export default function Navigation(props) {
 	const mousePosition = useMousePosition();
+	const screenSize = useScreenSize();
 	const [backgroundPosition, setBackgroundPosition] = useState({});
 	const [itemHover, setItemHover] = useState(false);
 
@@ -26,7 +28,9 @@ export default function Navigation(props) {
 		}
 	];
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		console.log(screenSize["x"]);
+	}, [screenSize]);
 
 	function handleMouseMove() {
 		let mouseX = mousePosition["x"];
@@ -42,13 +46,53 @@ export default function Navigation(props) {
 
 	return (
 		<div
-			className={
-				"navigation-menu-container " +
-				(props.navigationActive ? "active" : "")
-			}
+			className={"navigation-menu-container "}
 			onMouseMove={handleMouseMove}
 		>
-			<div className="navigation-menu-left">
+		
+<div className="navigation-background-container">
+					<div
+						className={
+							"navigation-background-section " +
+							(props.navigationActive ? "active" : "")
+						}
+						style={{ height: screenSize["y"] / 5 + "px" }}
+					></div>
+					<div
+						className={
+							"navigation-background-section " +
+							(props.navigationActive ? "active" : "")
+						}
+						style={{ height: screenSize["y"] / 5 + "px" }}
+					></div>
+					<div
+						className={
+							"navigation-background-section " +
+							(props.navigationActive ? "active" : "")
+						}
+						style={{ height: screenSize["y"] / 5 + "px" }}
+					></div>
+					<div
+						className={
+							"navigation-background-section " +
+							(props.navigationActive ? "active" : "")
+						}
+						style={{ height: screenSize["y"] / 5 + "px" }}
+					></div>
+					<div
+						className={
+							"navigation-background-section " +
+							(props.navigationActive ? "active" : "")
+						}
+						style={{ height: screenSize["y"] / 5 + "px" }}
+					></div>
+				</div>
+			<div
+				className={
+					"navigation-menu-left " +
+					(props.navigationActive ? "active" : "")
+				}
+			>
 				<div
 					className="navigation-menu-background-overlay"
 					style={{
@@ -60,8 +104,14 @@ export default function Navigation(props) {
 					}}
 				></div>
 			</div>
-			<div className="navigation-menu-right">
-				<div className="navigation-items-container">
+			<div
+				className={
+					"navigation-menu-right " +
+					(props.navigationActive ? "active" : "")
+				}
+			>
+				<div className={"navigation-items-container " +
+					(props.navigationActive ? "active" : "")}>
 					{navigationItems.map((item, index) => {
 						return (
 							<NavigationItem
