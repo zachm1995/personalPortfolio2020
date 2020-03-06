@@ -192,29 +192,26 @@
 	transition: .8s;
 	transition-timing-function: $ease-timing-alt;
 	&:nth-child(1) {
-		position: relative;
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 		transition: .8s;
 	}
 	&:nth-child(2) {
-		position: relative;
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 		transition: 1.2s;
 	}
 	&:nth-child(3) {
-		position: relative;
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 		transition: 1.4s;
 	}
 	&:nth-child(4) {
-		position: relative;
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 		transition: 1.6s;
 	}
 	&:nth-child(5) {
-		position: relative;
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 		transition: 1.8s;
+		position: absolute;
+		top: 0;
 	}
 	&.active {
 		&:nth-child(1) {
