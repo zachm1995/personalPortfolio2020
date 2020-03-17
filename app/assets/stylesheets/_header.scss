@@ -150,8 +150,14 @@
 			z-index: 10;
 			max-height: 75vh;
 			visibility: hidden;
+			& * > span {
+					opacity: 0;
+				}
 			&.active {
 				visibility: visible;
+				& * > span {
+					opacity: 1;
+				}
 			}
 			/* Navigation Menu Items */
 			& > .navigation-menu-item {
