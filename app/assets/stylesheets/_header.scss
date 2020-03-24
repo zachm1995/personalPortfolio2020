@@ -23,7 +23,7 @@
 	top: 40px;
 	right: 40px;
 	box-sizing: border-box;
-	transition: 1.5s;
+	transition: .8s;
 	&:hover {
 		cursor: crosshair;
 	}
@@ -170,7 +170,7 @@
 				}
 				@for $i from 1 to 10 {
 					&:nth-child(#{$i}) {
-						animation-delay: #{0.3 + ($i * 0.5)}s;
+						animation-delay: #{0.1 + ($i * 0.4)}s;
 					}
 				}
 				& > span.nav-item-active {
