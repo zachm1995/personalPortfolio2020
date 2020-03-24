@@ -9,10 +9,12 @@ export default function Header(props) {
 				toggleNavigation={props.toggleNavigation}
 				navigationActive={props.navigationActive}
 				navigationLoaded={props.navigationLoaded}
+				handleHoverableElement={props.handleHoverableElement}
 			/>
 			<Navigation
 				navigationActive={props.navigationActive}
 				handlePageChange={props.handlePageChange}
+				handleHoverableElement={props.handleHoverableElement}
 			/>
 		</div>
 	);

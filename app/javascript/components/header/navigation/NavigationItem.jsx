@@ -15,10 +15,12 @@ export default function NavigationItem(props) {
 			onMouseEnter={() => {
 				props.handleItemHover(true);
 				setItemActive(true);
+				props.handleHoverableElement(true);
 			}}
 			onMouseLeave={() => {
 				props.handleItemHover(false);
 				setItemActive(false);
+				props.handleHoverableElement(false);
 			}}
 		>
 			<span

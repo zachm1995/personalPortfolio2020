@@ -24,9 +24,6 @@
 	right: 40px;
 	box-sizing: border-box;
 	transition: .8s;
-	&:hover {
-		cursor: crosshair;
-	}
 	& > span {
 		display: block;
 		transition: 1.5s;
@@ -175,7 +172,6 @@
 				}
 				& > span.nav-item-active {
 					color: $grey;
-					cursor: crosshair;
 					letter-spacing: 2px;
 				}
 				& > span.nav-item-inactive {

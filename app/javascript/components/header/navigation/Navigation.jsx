@@ -122,6 +122,7 @@ export default function Navigation(props) {
 								handlePageChange={props.handlePageChange}
 								handleItemHover={handleItemHover}
 								itemHover={itemHover}
+								handleHoverableElement={props.handleHoverableElement}
 							/>
 						);
 					})}
