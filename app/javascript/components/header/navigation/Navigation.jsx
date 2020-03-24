@@ -28,10 +28,6 @@ export default function Navigation(props) {
 		}
 	];
 
-	useEffect(() => {
-		console.log(screenSize["x"]);
-	}, [screenSize]);
-
 	function handleMouseMove() {
 		let mouseX = mousePosition["x"];
 		let mouseY = mousePosition["y"];

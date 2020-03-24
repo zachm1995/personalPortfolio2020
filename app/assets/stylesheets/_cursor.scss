@@ -24,6 +24,12 @@ body {
 		left: 40%;
 	}
 	&.cursor-hover {
+		transition: transform 1s;
+		background-color: $slate;
+		border-color: $white;
+		transform: scale(1.5);
+	}
+	&.cursor-click {
 		&:after {
 			content: '';
 			width: 100%;
@@ -34,10 +40,6 @@ body {
 			left: -3px;
 			animation: cursorHoverAnimation 1s 1 forwards;
 		}
-		transition: transform 1s;
-		background-color: $slate;
-		border-color: $white;
-		transform: scale(1.5);
 	}
 }
 
