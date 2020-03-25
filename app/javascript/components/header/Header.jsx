@@ -10,7 +10,6 @@ export default function Header(props) {
 				navigationActive={props.navigationActive}
 				navigationLoaded={props.navigationLoaded}
 				handleHoverableElement={props.handleHoverableElement}
-				 backgroundColor={props.backgroundColor}
 			/>
 			<Navigation
 				navigationActive={props.navigationActive}

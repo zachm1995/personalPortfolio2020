@@ -1,13 +1,32 @@
+/*
+ * SCSS Pallete
+ * Developed by Zach Mumbauer
+ */
+
+/* ==========================================================================
+   Light and Elegant
+   ========================================================================== */
+
+/*
+ * Dependencies
+ * scrollout.js
+ */
+
+/* imports */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200|Prata&display=swap');
 
-// colors
+/* colors */
 $beige: #FAF3DD;
 $grey: #C8D3D5;
 $pastel-blue: #A4B8C4;
 $blue-grey: #6E8387;
 $powder-blue: #B1DDF1;
 
-// type
+/* timing functions */
+$ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
+$ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
+
+/* type */
 $ele-primary-font: 'Prata', serif;
 $ele-secondary-font: 'Montserrat', sans-serif;
 
@@ -35,8 +54,9 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 	font-variant: $ele-secondary-font;
 }
 
-// containers
+/* containers */
 .ele {
+	/* highlighted block of text */
 	&-blurb {
 		position: relative;
 		padding: 20px;
@@ -46,33 +66,70 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 		font-family: $ele-primary-font;
 		margin-bottom: 40px;
 		border: 2px solid $blue-grey;
+		transition: opacity .8s $ease-timing;
+
+		/* top left */
 		&:before {
 			content: '';
+			transition: .8s $ease-timing;
 			position: absolute;
-			top: 10px;
-			left: 10px;
-			width: 100%;
-			height: 100%;
-			background-color: $grey;
-			z-index: -1;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			top: -10px;
-			left: -10px;
+			top: 0px;
+			left: 0px;
 			width: 100%;
 			height: 100%;
 			background-color: $pastel-blue;
 			z-index: -1;
 		}
+
+		/* bottom right */
+		&:after {
+			content: '';
+			transition: .8s $ease-timing;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: $grey;
+			z-index: -1;
+		}
+
+		/* animation in */
+		&[data-scroll='in'] {
+			opacity: 1;
+			&:before {
+				opacity: 1;
+				top: -10px;
+				left: -10px;
+			}
+			&:after {
+				opacity: 1;
+				top: 10px;
+				left: 10px;
+			}
+		}
+
+		/* animation out */
+		&[data-scroll='out'] {
+			&:before {
+				opacity: 0;
+				top: 0px;
+				left: 0px;
+			}
+			&:after {
+				opacity: 0;
+				top: 0px;
+				left: 0px;
+			}
+		}
 	}
+
+	/* sets padding between sections of the page */
 	&-section {
 		padding-bottom: 10vh
 	}
-	&-paragraph {
 
-	}
+	/* sets padding and colors to the page content */
 	&-page {
 		width: 100vw;
 		height: 100vh;
@@ -84,4 +141,4 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 	}
 }
 
-// animations
+/* animations */

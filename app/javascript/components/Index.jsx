@@ -12,6 +12,8 @@ export default function Index(props) {
 	const [navigationActive, setNavigationActive] = useState(false);
 	const [cursorHover, setCursorHover] = useState(false);
 	const [backgroundColor, setBackgroundColor] = useState("purple-gradient");
+	const [browserType, setBrowserType] = useState("");
+
 	const location = useLocation();
 	let pathname = location.pathname;
 
@@ -32,18 +34,24 @@ export default function Index(props) {
 	function renderSwitch(pathname) {
 		switch (pathname) {
 			case "/":
-				return setBackgroundColor("purple-gradient");
+				return setBackgroundColor("gradient-purple");
 			case "/about":
-				return setBackgroundColor("ele-gradient");
+				return setBackgroundColor("ele");
 			default:
-				return setBackgroundColor("purple-gradient");
+				return setBackgroundColor("gradient-purple");
 		}
 	}
 
 	return (
 		<div>
-			<Background navigationActive={navigationActive} backgroundColor={backgroundColor} />
-			<Cursor cursorHover={cursorHover} />
+			<Background
+				navigationActive={navigationActive}
+				backgroundColor={backgroundColor}
+			/>
+			<Cursor
+				cursorHover={cursorHover}
+				backgroundColor={backgroundColor}
+			/>
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}

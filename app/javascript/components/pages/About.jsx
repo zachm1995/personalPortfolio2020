@@ -1,15 +1,25 @@
 import React from "react";
+import { useEffect } from "react";
+import ScrollOut from "scroll-out";
 import UnitedStatesTravelMap from "images/travel_map.svg";
 
 export default function About(props) {
+	useEffect(() => {
+		ScrollOut();
+	}, []);
+
 	return (
 		<div className="ele-page">
 			<div className="ele-section">
-				<div className="title center">Zach Mumbauer</div>
-				<div className="subtitle center">The concise version</div>
+				<div className="title center" data-scroll>
+					Zach Mumbauer
+				</div>
+				<div className="subtitle center" data-scroll>
+					The concise version
+				</div>
 			</div>
 			<div className="ele-section">
-				<div className="ele-blurb">
+				<div className="ele-blurb" data-scroll>
 					My life’s aspiration is to leverage technology and socially
 					conscientious business practices to create a lasting,
 					positive impact for as many people as possible.

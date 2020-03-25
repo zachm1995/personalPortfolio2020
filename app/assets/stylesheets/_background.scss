@@ -9,11 +9,11 @@
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	&.purple-gradient {
+	&.gradient-purple {
 		@include purple-gradient-background;
-	} &.slate-gradient {
+	} &.gradient-slate {
 		@include slate-gradient-background;
-	} &.ele-gradient {
+	} &.ele {
 		background: $beige;
 	}
 }
