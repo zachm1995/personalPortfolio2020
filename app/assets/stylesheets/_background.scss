@@ -2,36 +2,19 @@
 
 .site-background-container {
 	@include purple-gradient-background;
+	transition: 1s;
 	z-index: -10;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border: 20px solid $white;
-	box-sizing: border-box;
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		opacity: 0;
-		z-index: -11;
-		transition: opacity 1s ease;
-		background: white;
-		border: $slate;
-	}
-	&.active::before {
-		opacity: 1;
-	}
+	top: 0px;
+	left: 0px;
 	&.purple-gradient {
 		@include purple-gradient-background;
 	} &.slate-gradient {
 		@include slate-gradient-background;
+	} &.ele-gradient {
+		background: $beige;
 	}
 }
 

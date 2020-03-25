@@ -79,6 +79,13 @@ export default function Navigation(props) {
 						"navigation-background-section " +
 						(props.navigationActive ? "active" : "")
 					}
+					style={{ height: screenSize["y"] / 5 + "px" }}
+				></div>
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
 					style={{ height: screenSize["y"] + "px" }}
 				></div>
 			</div>
