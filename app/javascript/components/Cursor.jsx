@@ -3,7 +3,6 @@ import { useMousePosition } from "../custom_hooks/useMousePosition";
 
 export default function Cursor(props) {
 	const mousePosition = useMousePosition();
-	const mouseClick = useMouseClick();
 	const [scrollTop, setScrollTop] = useState(window.pageYOffset);
 
 	useEffect(() => {

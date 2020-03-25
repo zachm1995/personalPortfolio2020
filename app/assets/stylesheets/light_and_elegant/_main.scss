@@ -36,7 +36,7 @@ $ele-secondary-font: "Montserrat", sans-serif;
 		font-size: 2em;
 		font-family: $ele-primary-font;
 		margin-bottom: 40px;
-		transition: 0.8s $ease-timing;
+		transition: 1.2s $ease-timing;
 
 		/* pushes subtitles after titles closer to the title for pairing */
 		& + .ele-subtitle {
@@ -45,10 +45,12 @@ $ele-secondary-font: "Montserrat", sans-serif;
 
 		&[data-scroll="in"] {
 			opacity: 1;
+			transform: translate3d(0, -50, 0);
 		}
 
 		&[data-scroll="out"] {
 			opacity: 0;
+			transform: translate3d(0, 100%, 0);
 		}
 	}
 
@@ -61,14 +63,15 @@ $ele-secondary-font: "Montserrat", sans-serif;
 		text-transform: lowercase;
 		font-weight: 200;
 		margin-bottom: 40px;
-		transition: 0.8s $ease-timing;
-
+		transition: 0.8s $ease-timing-alt;
 		&[data-scroll="in"] {
 			opacity: 1;
+			transform: translate3d(0, -50, 0);
 		}
 
 		&[data-scroll="out"] {
 			opacity: 0;
+			transform: translate3d(0, 100%, 0);
 		}
 	}
 
@@ -77,6 +80,16 @@ $ele-secondary-font: "Montserrat", sans-serif;
 		font-size: 1.2em;
 		font-family: $ele-secondary-font;
 		margin-bottom: 20px;
+		transition: 0.8s $ease-timing-alt;
+		&[data-scroll="in"] {
+			opacity: 1;
+			transform: translate3d(0, -50, 0);
+		}
+
+		&[data-scroll="out"] {
+			opacity: 0;
+			transform: translate3d(0, 100%, 0);
+		}
 	}
 }
 

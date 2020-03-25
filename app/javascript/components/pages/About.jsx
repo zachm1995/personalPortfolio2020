@@ -8,6 +8,7 @@ import EagleBadge from "images/eagle_badge.png";
 import Latte from "images/latte.png";
 import EMT from "images/emt.png";
 import PADI from "images/padi.png";
+import Code from "images/code.svg";
 
 export default function About(props) {
 	useEffect(() => {
@@ -37,8 +38,10 @@ export default function About(props) {
 				<div className="flex flex-2">
 					<div>
 						<div className="ele-title center" data-scroll>I've been around</div>
-						<div className="ele-body center" data-scroll>
-							49 states and 23 countries
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
+							49 states and 23 countries so far
 						</div>
 						<img
 							src={UnitedStatesTravelMap}
@@ -51,75 +54,100 @@ export default function About(props) {
 						<div className="ele-title center" data-scroll>
 							I'm an Eagle Scout
 						</div>
-						<div className="ele-body center" data-scroll>
-							with X merit badges
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
+							with 93 merit badges
 						</div>
 						<img
 							src={EagleBadge}
 							className="about-image"
 							alt="an Eagle Scout patch"
+							data-scroll
 						/>
 					</div>
 					<div>
 						<div className="ele-title center" data-scroll>
 							I like to play music
 						</div>
-						<div className="ele-body center" data-scroll>
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
 							piano, guitar, percussion, and vocals
 						</div>
 						<img
 							src={Guitar}
 							className="about-image"
 							alt="an acoustic guitar"
+							data-scroll
 						/>
 					</div>
 					<div>
 						<div className="ele-title center" data-scroll>
 							I won an award for vocals
 						</div>
-						<div className="ele-body center" data-scroll>
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
 							and sang with a vocal group in Carnegie Hall
 						</div>
 						<img
 							src={Microphone}
 							className="about-image"
 							alt="a microphone"
+							data-scroll
 						/>
 					</div>
 					<div>
 						<div className="ele-title center" data-scroll>
 							I take my coffee black
 						</div>
-						<div className="ele-body center" data-scroll>
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
 							but I'm good at pouring milk into cups
 						</div>
 						<img
 							src={Latte}
 							className="about-image"
 							alt="a picture of a latte"
+							data-scroll
 						/>
 					</div>
 					<div>
 						<div className="ele-title center" data-scroll>
 							I took EMT training
 						</div>
-						<div className="ele-body center" data-scroll>
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
 							and luckily never had to use it
 						</div>
 						<img
 							src={EMT}
 							className="about-image"
 							alt="an EMT symbol"
+							data-scroll
 						/>
 					</div>
-					
+					<div>
+						<div className="ele-title center" data-scroll>
+							I like disruption
+						</div>
+						<div className="ele-body center" style={{
+							marginTop: '-40px',
+						}} data-scroll>
+							I've worked at four start-ups
+						</div>
+						<img
+							src={Code}
+							className="about-image"
+							alt="a symbol for coding"
+							data-scroll
+						/>
+					</div>
 				</div>
 			</div>
-
-			<p>I have worked with four different start-ups</p>
-			<p>I can pour a swan in your latte</p>
-			<p>I completed an EMT-B course</p>
-			<p>I have a motorcycle license</p>
 		</div>
 	);
 }

@@ -20,3 +20,9 @@ className="about-image"
 alt="an EMT symbol"
 />
 </div>
+
+Todo:
+
+Custom cursor colors
+
+contact page

@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .about-container {
 	max-width: 1200px;
@@ -10,4 +10,14 @@
 	max-height: 150px;
 	display: block;
 	margin: 0 auto;
+	transition: .6s;
+	&[data-scroll="in"] {
+		opacity: 1;
+		transform: translate3d(0, -50, 0);
+	}
+
+	&[data-scroll="out"] {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
 }
