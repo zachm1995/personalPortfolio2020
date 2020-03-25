@@ -7,8 +7,8 @@ export default function NavigationToggle(props) {
 				"navigation-toggle " + (props.navigationActive ? "active" : "")
 			}
 			onClick={() => props.toggleNavigation()}
-			onMouseEnter={() => props.handleHoverableElement(true)}
-			onMouseLeave={() => props.handleHoverableElement(false)}
+			onPointerEnter={() => props.handleHoverableElement(true)}
+			onPointerLeave={() => props.handleHoverableElement(false)}
 		>
 			<span></span>
 			<span></span>

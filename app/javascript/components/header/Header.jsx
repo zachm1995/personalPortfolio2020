@@ -13,7 +13,6 @@ export default function Header(props) {
 			/>
 			<Navigation
 				navigationActive={props.navigationActive}
-				handlePageChange={props.handlePageChange}
 				handleHoverableElement={props.handleHoverableElement}
 			/>
 		</div>

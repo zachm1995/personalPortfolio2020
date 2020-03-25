@@ -1,0 +1,28 @@
+// SCSS TOOLKIT
+// Developed by Zach Mumbauer
+
+// Alignment
+.center {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin: 0 auto;
+	vertical-align: center;
+}
+
+.left {
+	text-align: left;
+	justify-content: left;
+	align-items: left;
+	align-content: left;
+	float: left;
+}
+
+.right {
+	text-align: right;
+	justify-content: right;
+	align-items: right;
+	align-content: right;
+	float: right;
+}

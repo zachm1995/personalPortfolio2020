@@ -30,9 +30,14 @@ export default function Landing(props) {
 					Zach Mumbauer
 				</div>
 				<div>
-					<Typed strings={["Tech-centric pantologist"]} typeSpeed={40} startDelay={1200} />
+					<Typed
+						strings={["Tech-centric pantologist"]}
+						typeSpeed={40}
+						startDelay={1200}
+					/>
 				</div>
 			</div>
+			{props.children}
 		</div>
 	);
 }

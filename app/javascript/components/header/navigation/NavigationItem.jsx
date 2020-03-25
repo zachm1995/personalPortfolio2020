@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function NavigationItem(props) {
 	const [itemActive, setItemActive] = useState(false);
@@ -9,9 +10,6 @@ export default function NavigationItem(props) {
 				"navigation-menu-item " +
 				(props.navigationActive ? "animate fadeUp" : "")
 			}
-			onClick={() => {
-				props.handlePageChange(props.link);
-			}}
 			onMouseEnter={() => {
 				props.handleItemHover(true);
 				setItemActive(true);
@@ -23,13 +21,13 @@ export default function NavigationItem(props) {
 				props.handleHoverableElement(false);
 			}}
 		>
-			<span
+			<Link
 				className={
 					(itemActive ? "nav-item-active " : "")
-				}
+				} to={'/' + props.link}
 			>
 				{props.title}
-			</span>
+			</Link>
 		</div>
 	);
 }

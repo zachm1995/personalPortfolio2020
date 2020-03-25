@@ -1,0 +1,22 @@
+// SCSS TOOLKIT
+// Developed by Zach Mumbauer
+
+// The Flexbox
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	& > * {
+		display: flex;
+		flex-direction: column;
+		order: 0;
+	}
+	@for $i from 1 through 12 {
+		&-#{$i} {
+			& > * {
+				flex-basis: calc(100/#{$i});
+			}
+		}
+	}
+}

@@ -1,7 +1,7 @@
 @import './variables';
 
 .site-background-container {
-	@include rich-purple-gradient-background;
+	@include purple-gradient-background;
 	z-index: -10;
 	width: 100vw;
 	height: 100vh;
@@ -27,6 +27,11 @@
 	}
 	&.active::before {
 		opacity: 1;
+	}
+	&.purple-gradient {
+		@include purple-gradient-background;
+	} &.slate-gradient {
+		@include slate-gradient-background;
 	}
 }
 

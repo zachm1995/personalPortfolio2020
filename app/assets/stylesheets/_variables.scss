@@ -1,21 +1,30 @@
 // Colors
 $white: #ffffff;
 $grey: #7f7f7f;
+$grey-dark: #222222;
 $slate: #191919;
 $crimson: #ba2525;
 $transparent: rgba(0, 0, 0, 0);
 $gradient-purple: linear-gradient(
-		292deg,
-		#8e2de2,
-		#191919,
-		#6000ff,
-		#191919,
-		#6441a5,
-		#191919,
-		#2a0845,
-		#191919,
-		#4a00e0
-	);
+	280deg,
+	#8e2de2,
+	#191919,
+	#6000ff,
+	#191919,
+	#6441a5,
+	#191919,
+	#2a0845,
+	#191919,
+	#4a00e0
+);
+$gradient-slate: linear-gradient(
+	280deg,
+	#191919,
+	#3d3d3d,
+	#000000,
+	#3d3d3d,
+	#191919
+);
 
 // Typefaces
 $font-primary: "Raleway", sans-serif;
@@ -29,12 +38,30 @@ $header-background: $transparent;
 $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
 $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 
-@mixin rich-purple-gradient-background {
+@mixin purple-gradient-background {
 	background: $gradient-purple;
 	background-size: 4000% 4000%;
-	animation: richPurpleGradient 50s ease infinite;
+	animation: purpleGradient 50s ease infinite;
 
-	@keyframes richPurpleGradient {
+	@keyframes purpleGradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 51%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+}
+
+@mixin slate-gradient-background {
+	background: $gradient-slate;
+	background-size: 4000% 4000%;
+	animation: slateGradient 50s ease infinite;
+
+	@keyframes slateGradient {
 		0% {
 			background-position: 0% 50%;
 		}

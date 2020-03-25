@@ -147,12 +147,12 @@
 			z-index: 10;
 			max-height: 75vh;
 			visibility: hidden;
-			& * > span {
+			& * > a {
 					opacity: 0;
 				}
 			&.active {
 				visibility: visible;
-				& * > span {
+				& * > a {
 					opacity: 1;
 				}
 			}
@@ -161,7 +161,7 @@
 				font-size: 3em;
 				text-transform: lowercase;
 				text-align: center;
-				& > span {
+				& > a {
 					transition: 0.8s;
 					animation-timing-function: $ease-timing;
 				}
@@ -170,11 +170,11 @@
 						animation-delay: #{0.1 + ($i * 0.4)}s;
 					}
 				}
-				& > span.nav-item-active {
+				& > a.nav-item-active {
 					color: $grey;
 					letter-spacing: 2px;
 				}
-				& > span.nav-item-inactive {
+				& > a.nav-item-inactive {
 					color: $white;
 				}
 			}

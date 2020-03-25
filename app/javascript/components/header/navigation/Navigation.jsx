@@ -12,7 +12,7 @@ export default function Navigation(props) {
 	const navigationItems = [
 		{
 			title: "Home",
-			link: "landing"
+			link: ""
 		},
 		{
 			title: "About",
@@ -45,44 +45,43 @@ export default function Navigation(props) {
 			className={"navigation-menu-container "}
 			onMouseMove={handleMouseMove}
 		>
-		
-<div className="navigation-background-container">
-					<div
-						className={
-							"navigation-background-section " +
-							(props.navigationActive ? "active" : "")
-						}
-						style={{ height: screenSize["y"] / 5 + "px" }}
-					></div>
-					<div
-						className={
-							"navigation-background-section " +
-							(props.navigationActive ? "active" : "")
-						}
-						style={{ height: screenSize["y"] / 5 + "px" }}
-					></div>
-					<div
-						className={
-							"navigation-background-section " +
-							(props.navigationActive ? "active" : "")
-						}
-						style={{ height: screenSize["y"] / 5 + "px" }}
-					></div>
-					<div
-						className={
-							"navigation-background-section " +
-							(props.navigationActive ? "active" : "")
-						}
-						style={{ height: screenSize["y"] / 5 + "px" }}
-					></div>
-					<div
-						className={
-							"navigation-background-section " +
-							(props.navigationActive ? "active" : "")
-						}
-						style={{ height: screenSize["y"] + "px" }}
-					></div>
-				</div>
+			<div className="navigation-background-container">
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
+					style={{ height: screenSize["y"] / 5 + "px" }}
+				></div>
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
+					style={{ height: screenSize["y"] / 5 + "px" }}
+				></div>
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
+					style={{ height: screenSize["y"] / 5 + "px" }}
+				></div>
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
+					style={{ height: screenSize["y"] / 5 + "px" }}
+				></div>
+				<div
+					className={
+						"navigation-background-section " +
+						(props.navigationActive ? "active" : "")
+					}
+					style={{ height: screenSize["y"] + "px" }}
+				></div>
+			</div>
 			<div
 				className={
 					"navigation-menu-left " +
@@ -106,8 +105,12 @@ export default function Navigation(props) {
 					(props.navigationActive ? "active" : "")
 				}
 			>
-				<div className={"navigation-items-container " +
-					(props.navigationActive ? "active" : "")}>
+				<div
+					className={
+						"navigation-items-container " +
+						(props.navigationActive ? "active" : "")
+					}
+				>
 					{navigationItems.map((item, index) => {
 						return (
 							<NavigationItem
@@ -115,10 +118,11 @@ export default function Navigation(props) {
 								link={item.link}
 								navigationActive={props.navigationActive}
 								key={index}
-								handlePageChange={props.handlePageChange}
 								handleItemHover={handleItemHover}
 								itemHover={itemHover}
-								handleHoverableElement={props.handleHoverableElement}
+								handleHoverableElement={
+									props.handleHoverableElement
+								}
 							/>
 						);
 					})}
