@@ -6396,6 +6396,11 @@ schema-utils@^2.5.0, schema-utils@^2.6.0, schema-utils@^2.6.1, schema-utils@^2.6
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
+scroll-out@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/scroll-out/-/scroll-out-2.2.8.tgz#64f5e04a6461e81bc83b70306899873ccec4534c"
+  integrity sha512-MbgimDzobEvVrKwQLMwKHJBG9Z2knFJ8yFiPD0lBLbR2w6bBEZW97HNJ+PrAwcHRcEjPSTswLHZq5VVIB7En1g==
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"

@@ -1,0 +1,64 @@
+/*
+ * SCSS TOOLKIT
+ * Developed by Zach Mumbauer
+ */
+
+/* ==========================================================================
+   The Scrollbar
+   ========================================================================== */
+
+/* Settings */
+
+$hide-scrollbar: true;
+$scrollbar-width: 0px;
+$scrollbar-arrow-height: .5vh;
+$scrollbar-arrow-color: white;
+$scrollbar-track-color: white;
+$scrollbar-thumb-border-radius: 10px;
+$scrollbar-thumb-color: white;
+
+/* Sets the width of the scrollbar and everything in it */
+::-webkit-scrollbar {
+	@if $hide-scrollbar {
+		display: none;
+	}
+	width: $scrollbar-width;
+	position: fixed;
+	right: 20px;
+	margin-right: 20px;
+}
+
+/* 
+ * Sets the properties for the bottons on the top and bottom.
+ * For arrows, you need to add a background image.
+ */
+::-webkit-scrollbar-button {
+	display: block;
+	height: $scrollbar-arrow-height;
+	background-color: $scrollbar-arrow-color;
+} 
+
+/* Sets the properties for the bar that tracks the page position */
+::-webkit-scrollbar-thumb {
+	border-radius: $scrollbar-thumb-border-radius;
+	background: $scrollbar-thumb-color;
+	width: 2px;
+}
+
+/* Sets the properties for the background of the scrollbar behind the thumb */
+::-webkit-scrollbar-track {
+	background: $scrollbar-track-color;
+}
+
+
+::-webkit-scrollbar-track-piece {
+	background: grey;
+}
+
+::-webkit-scrollbar-corner {
+
+}
+
+::-webkit-resizer {
+
+}

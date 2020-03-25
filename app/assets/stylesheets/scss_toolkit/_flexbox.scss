@@ -1,7 +1,11 @@
-// SCSS TOOLKIT
-// Developed by Zach Mumbauer
+/*
+ * SCSS TOOLKIT
+ * Developed by Zach Mumbauer
+ */
 
-// The Flexbox
+/* ==========================================================================
+   The Flexbox
+   ========================================================================== */
 
 .flex {
 	display: flex;
@@ -23,7 +27,7 @@
 	@for $i from 1 through 12 {
 		&-#{$i} {
 			& > * {
-				flex-basis: (100%/#{$i});
+				flex-basis: (100% /#{$i});
 			}
 		}
 	}

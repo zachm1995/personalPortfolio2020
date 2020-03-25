@@ -2,16 +2,21 @@ import React, { useState, useEffect } from "react";
 
 export default function NavigationToggle(props) {
 	const [currentColor, setCurrentColor] = useState("purple");
+
 	useEffect(() => {
-		switch (props.backgroundColor) {
-			case 'purple-gradient':
-				return setCurrentColor("white");
-			case 'ele-gradient':
-				return setCurrentColor("#6E8387");
-			default:
-				return setCurrentColor("white");
+		if (props.navigationActive) {
+			return setCurrentColor("red");
+		} else {
+			switch (props.backgroundColor) {
+				case "purple-gradient":
+					return setCurrentColor("white");
+				case "ele-gradient":
+					return setCurrentColor("#6E8387");
+				default:
+					return setCurrentColor("white");
+			}
 		}
-	}, [props.backgroundColor]);
+	}, [props.backgroundColor, props.navigationActive]);
 
 	return (
 		<div
@@ -22,15 +27,21 @@ export default function NavigationToggle(props) {
 			onPointerEnter={() => props.handleHoverableElement(true)}
 			onPointerLeave={() => props.handleHoverableElement(false)}
 		>
-			<span style={{
-				backgroundColor: currentColor,
-			}}></span>
-			<span style={{
-				backgroundColor: currentColor,
-			}}></span>
-			<span style={{
-				backgroundColor: currentColor,
-			}}></span>
+			<span
+				style={{
+					backgroundColor: currentColor
+				}}
+			></span>
+			<span
+				style={{
+					backgroundColor: currentColor
+				}}
+			></span>
+			<span
+				style={{
+					backgroundColor: currentColor
+				}}
+			></span>
 		</div>
 	);
 }
