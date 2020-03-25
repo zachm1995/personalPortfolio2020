@@ -37,7 +37,7 @@ export default function Index(props) {
 					<Route
 						exact
 						path="/"
-						component={() => (
+						render={() => (
 							<Landing
 								headerHeight={headerHeight}
 								footerHeight={footerHeight}

@@ -20,6 +20,9 @@ export default function NavigationItem(props) {
 				setItemActive(false);
 				props.handleHoverableElement(false);
 			}}
+			onClick={() => {
+				props.toggleNavigation();
+			}}
 		>
 			<Link
 				className={

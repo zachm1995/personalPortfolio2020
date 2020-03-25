@@ -18,14 +18,14 @@ export default function Navigation(props) {
 			title: "About",
 			link: "about"
 		},
-		{
-			title: "Projects",
-			link: "portfolio"
-		},
-		{
-			title: "Contact",
-			link: "contact"
-		}
+		// {
+		// 	title: "Projects",
+		// 	link: "portfolio"
+		// },
+		// {
+		// 	title: "Contact",
+		// 	link: "contact"
+		// }
 	];
 
 	function handleMouseMove() {
@@ -123,6 +123,7 @@ export default function Navigation(props) {
 								handleHoverableElement={
 									props.handleHoverableElement
 								}
+								toggleNavigation={props.toggleNavigation}
 							/>
 						);
 					})}
