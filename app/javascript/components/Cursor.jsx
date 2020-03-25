@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { useMousePosition } from "../custom_hooks/useMousePosition";
+import { useMouseClick } from "../custom_hooks/useMouseClick";
 
 export default function Cursor(props) {
 	const mousePosition = useMousePosition();
+	const mouseClick = useMouseClick();
 	const [scrollTop, setScrollTop] = useState(window.pageYOffset);
-
-	useEffect(() => {
-		document.body.addEventListener('mousedown', () => handleCursorClick());
-	}, []);
 
 	useEffect(() => {
 		setScrollTop(window.pageYOffset);
 	}, [window.pageYOffset]);
 
+	useEffect(() => {
+		handleCursorClick();
+	}, [mouseClick]);
+
 	function handleCursorClick() {
 		document.getElementById("cursor").classList.add("cursor-click");
-
 		setTimeout(() => {
 			document.getElementById("cursor").classList.remove("cursor-click");
-		}, 1000);
+		}, 900);
 	}
 
 	return (

@@ -52,3 +52,9 @@ body {
 		opacity: 0;
 	}
 }
+
+@media (pointer: course) {
+	#cursor {
+		display: none;
+	}
+}

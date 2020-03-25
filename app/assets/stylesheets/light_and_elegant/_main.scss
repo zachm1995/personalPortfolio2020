@@ -67,6 +67,7 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 		margin-bottom: 40px;
 		border: 2px solid $blue-grey;
 		transition: opacity .8s $ease-timing;
+		opacity: 0;
 
 		/* top left */
 		&:before {
@@ -93,7 +94,9 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 			background-color: $grey;
 			z-index: -1;
 		}
-
+		&[data-scroll] {
+			opacity: 1;
+		}
 		/* animation in */
 		&[data-scroll='in'] {
 			opacity: 1;

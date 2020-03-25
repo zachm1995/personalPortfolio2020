@@ -8,9 +8,9 @@ export default function NavigationToggle(props) {
 			return setCurrentColor("red");
 		} else {
 			switch (props.backgroundColor) {
-				case "purple-gradient":
+				case "gradient-purple":
 					return setCurrentColor("white");
-				case "ele-gradient":
+				case "ele":
 					return setCurrentColor("#6E8387");
 				default:
 					return setCurrentColor("white");
