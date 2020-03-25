@@ -6,3 +6,17 @@ Cubic Bezier and Tranform Animation
 // &.active {
 // 	transform: translateZ(0);
 // }
+
+<div>
+<div className="ele-title center">
+I have my diving certification
+</div>
+<div className="ele-body center">
+
+</div>
+<img
+src={PADI}
+className="about-image"
+alt="an EMT symbol"
+/>
+</div>

@@ -2,6 +2,12 @@ import React from "react";
 import { useEffect } from "react";
 import ScrollOut from "scroll-out";
 import UnitedStatesTravelMap from "images/travel_map.svg";
+import Guitar from "images/guitar.png";
+import Microphone from "images/microphone.png";
+import EagleBadge from "images/eagle_badge.png";
+import Latte from "images/latte.png";
+import EMT from "images/emt.png";
+import PADI from "images/padi.png";
 
 export default function About(props) {
 	useEffect(() => {
@@ -11,13 +17,14 @@ export default function About(props) {
 	return (
 		<div className="ele-page">
 			<div className="ele-section">
-				<div className="title center" data-scroll>
+				<div className="ele-title center" data-scroll>
 					Zach Mumbauer
 				</div>
-				<div className="subtitle center" data-scroll>
+				<div className="ele-subtitle center" data-scroll>
 					The concise version
 				</div>
 			</div>
+
 			<div className="ele-section">
 				<div className="ele-blurb" data-scroll>
 					My life’s aspiration is to leverage technology and socially
@@ -25,41 +32,90 @@ export default function About(props) {
 					positive impact for as many people as possible.
 				</div>
 			</div>
+
 			<div className="ele-section">
 				<div className="flex flex-2">
 					<div>
-						<div className="title center">Qualitative</div>
-						<div className="body">49 states</div>
+						<div className="ele-title center" data-scroll>I've been around</div>
+						<div className="ele-body center" data-scroll>
+							49 states and 23 countries
+						</div>
+						<img
+							src={UnitedStatesTravelMap}
+							className="about-image"
+							alt="a map of the United States showing only Hawaii as the only untraveled state"
+							data-scroll
+						/>
 					</div>
 					<div>
-						<div className="title center">Quantitative</div>
-						<div className="body"></div>
+						<div className="ele-title center" data-scroll>
+							I'm an Eagle Scout
+						</div>
+						<div className="ele-body center" data-scroll>
+							with X merit badges
+						</div>
+						<img
+							src={EagleBadge}
+							className="about-image"
+							alt="an Eagle Scout patch"
+						/>
 					</div>
-				</div>
-				<div className="flex flex-2">
 					<div>
-						<div className="title center">Qualitative</div>
-						<div className="body">49 states</div>
+						<div className="ele-title center" data-scroll>
+							I like to play music
+						</div>
+						<div className="ele-body center" data-scroll>
+							piano, guitar, percussion, and vocals
+						</div>
+						<img
+							src={Guitar}
+							className="about-image"
+							alt="an acoustic guitar"
+						/>
 					</div>
 					<div>
-						<div className="title center">Quantitative</div>
-						<div className="body"></div>
+						<div className="ele-title center" data-scroll>
+							I won an award for vocals
+						</div>
+						<div className="ele-body center" data-scroll>
+							and sang with a vocal group in Carnegie Hall
+						</div>
+						<img
+							src={Microphone}
+							className="about-image"
+							alt="a microphone"
+						/>
 					</div>
+					<div>
+						<div className="ele-title center" data-scroll>
+							I take my coffee black
+						</div>
+						<div className="ele-body center" data-scroll>
+							but I'm good at pouring milk into cups
+						</div>
+						<img
+							src={Latte}
+							className="about-image"
+							alt="a picture of a latte"
+						/>
+					</div>
+					<div>
+						<div className="ele-title center" data-scroll>
+							I took EMT training
+						</div>
+						<div className="ele-body center" data-scroll>
+							and luckily never had to use it
+						</div>
+						<img
+							src={EMT}
+							className="about-image"
+							alt="an EMT symbol"
+						/>
+					</div>
+					
 				</div>
 			</div>
-			<p>here is a map of my travels in the United States:</p>
-			<img
-				src={UnitedStatesTravelMap}
-				className="about-travel-map"
-				alt="a map of the United States showing only Hawaii as the only untraveled state"
-			/>
-			<p>this is a map of my travels internationally:</p>
-			<p></p>
-			<h1>Fun facts...</h1>
-			<p>I have visited all 50 states</p>
-			<p>I am an Eagle Scout</p>
-			<p>I play guitar, piano, and percussion</p>
-			<p>I sang with a vocal group in Carnegie Hall</p>
+
 			<p>I have worked with four different start-ups</p>
 			<p>I can pour a swan in your latte</p>
 			<p>I completed an EMT-B course</p>

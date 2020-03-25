@@ -14,7 +14,6 @@
 	width: 100%;
 	box-sizing: border-box;
 	justify-content: space-evenly;
-	padding: 20px;
 	& > * {
 		display: flex;
 		flex-direction: column;
@@ -22,13 +21,21 @@
 		box-sizing: border-box;
 		padding-right: 1%;
 		padding-left: 1%;
-		margin-bottom: 2vh;
+		margin-bottom: 10vh;
 	}
 	@for $i from 1 through 12 {
 		&-#{$i} {
 			& > * {
 				flex-basis: (100% /#{$i});
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.flex {
+		& > * {
+			flex-basis: 100%;
 		}
 	}
 }

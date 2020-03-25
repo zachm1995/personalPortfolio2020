@@ -13,45 +13,71 @@
  */
 
 /* imports */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200|Prata&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200|Prata&display=swap");
 
 /* colors */
-$beige: #FAF3DD;
-$grey: #C8D3D5;
-$pastel-blue: #A4B8C4;
-$blue-grey: #6E8387;
-$powder-blue: #B1DDF1;
+$beige: #faf3dd;
+$grey: #c8d3d5;
+$pastel-blue: #a4b8c4;
+$blue-grey: #6e8387;
+$powder-blue: #b1ddf1;
 
 /* timing functions */
 $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
 $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 
 /* type */
-$ele-primary-font: 'Prata', serif;
-$ele-secondary-font: 'Montserrat', sans-serif;
+$ele-primary-font: "Prata", serif;
+$ele-secondary-font: "Montserrat", sans-serif;
 
+/* used for upto 2 lines of text */
+.ele {
+	&-title {
+		font-size: 2em;
+		font-family: $ele-primary-font;
+		margin-bottom: 40px;
+		transition: 0.8s $ease-timing;
 
-.title {
-	font-size: 2em;
-	font-family: $ele-primary-font;
-	margin-bottom: 40px;
-	& + .subtitle {
-		margin-top: -40px;
+		/* pushes subtitles after titles closer to the title for pairing */
+		& + .ele-subtitle {
+			margin-top: -40px;
+		}
+
+		&[data-scroll="in"] {
+			opacity: 1;
+		}
+
+		&[data-scroll="out"] {
+			opacity: 0;
+		}
 	}
-}
-.subtitle {
-	font-size: 1.5em;
-	font-family: $ele-secondary-font;
-	font-style: italic;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	font-weight: 200;
-	margin-bottom: 40px;
-}
 
-.body {
-	font-size: 2em;
-	font-variant: $ele-secondary-font;
+	/* used for a small-cap title */
+	&-subtitle {
+		font-size: 1.5em;
+		font-family: $ele-secondary-font;
+		font-style: italic;
+		font-variant: small-caps;
+		text-transform: lowercase;
+		font-weight: 200;
+		margin-bottom: 40px;
+		transition: 0.8s $ease-timing;
+
+		&[data-scroll="in"] {
+			opacity: 1;
+		}
+
+		&[data-scroll="out"] {
+			opacity: 0;
+		}
+	}
+
+	/* used for paragraphs and general page text */
+	&-body {
+		font-size: 1.2em;
+		font-family: $ele-secondary-font;
+		margin-bottom: 20px;
+	}
 }
 
 /* containers */
@@ -66,13 +92,12 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 		font-family: $ele-primary-font;
 		margin-bottom: 40px;
 		border: 2px solid $blue-grey;
-		transition: opacity .8s $ease-timing;
-		opacity: 0;
+		transition: opacity 0.8s $ease-timing;
 
 		/* top left */
 		&:before {
-			content: '';
-			transition: .8s $ease-timing;
+			content: "";
+			transition: 0.8s $ease-timing;
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -84,8 +109,8 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 
 		/* bottom right */
 		&:after {
-			content: '';
-			transition: .8s $ease-timing;
+			content: "";
+			transition: 0.8s $ease-timing;
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -94,11 +119,9 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 			background-color: $grey;
 			z-index: -1;
 		}
-		&[data-scroll] {
-			opacity: 1;
-		}
+
 		/* animation in */
-		&[data-scroll='in'] {
+		&[data-scroll="in"] {
 			opacity: 1;
 			&:before {
 				opacity: 1;
@@ -113,7 +136,7 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 		}
 
 		/* animation out */
-		&[data-scroll='out'] {
+		&[data-scroll="out"] {
 			&:before {
 				opacity: 0;
 				top: 0px;
@@ -129,17 +152,16 @@ $ele-secondary-font: 'Montserrat', sans-serif;
 
 	/* sets padding between sections of the page */
 	&-section {
-		padding-bottom: 10vh
+		padding-bottom: 10vh;
 	}
 
 	/* sets padding and colors to the page content */
 	&-page {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
 		box-sizing: border-box;
-		padding: 4vh 10vw;
+		padding: 4vh 5vw;
 		color: $blue-grey;
 	}
 }
