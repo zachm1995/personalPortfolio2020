@@ -57,7 +57,7 @@ export default function About(props) {
 						<div className="ele-body center" style={{
 							marginTop: '-40px',
 						}} data-scroll>
-							with 93 merit badges
+							with 78 merit badges
 						</div>
 						<img
 							src={EagleBadge}
