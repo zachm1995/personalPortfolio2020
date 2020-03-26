@@ -10,7 +10,9 @@
 	max-height: 150px;
 	display: block;
 	margin: 0 auto;
-	transition: .6s;
+	transition: 1.4s;
+	opacity: 0;
+	margin-bottom: 20px;
 	&[data-scroll="in"] {
 		opacity: 1;
 		transform: translate3d(0, -50, 0);
@@ -19,5 +21,19 @@
 	&[data-scroll="out"] {
 		opacity: 0;
 		transform: translate3d(0, 100%, 0);
+	}
+}
+
+.about-arrow {
+	height: 30px;
+	display: block;
+	animation: floating infinite alternate 1s ease-in-out;
+}
+
+@keyframes floating {
+	from {
+		transform: translate3d(0, 0, 0);
+	} to {
+		transform: translate3d(0, 20px, 0);
 	}
 }

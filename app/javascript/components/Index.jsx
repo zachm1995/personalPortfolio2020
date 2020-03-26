@@ -5,6 +5,7 @@ import Background from "./Background";
 import Cursor from "./Cursor";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import { useLocation } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 
@@ -37,6 +38,8 @@ export default function Index(props) {
 				return setBackgroundColor("gradient-purple");
 			case "/about":
 				return setBackgroundColor("ele");
+			case "/contact":
+				return setBackgroundColor("gradient-slate");
 			default:
 				return setBackgroundColor("gradient-purple");
 		}
@@ -73,6 +76,9 @@ export default function Index(props) {
 				)}
 				{!navigationActive && (
 					<Route exact path="/about" component={About} />
+				)}
+				{!navigationActive && (
+					<Route exact path="/contact" component={Contact} />
 				)}
 			</Switch>
 		</div>

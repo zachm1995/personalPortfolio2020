@@ -1,0 +1,90 @@
+/*
+ * SCSS Pallete
+ * Developed by Zach Mumbauer
+ */
+
+/* ==========================================================================
+   Light and Elegant
+   ========================================================================== */
+
+/*
+ * Dependencies
+ * scrollout.js
+ */
+
+$theme-prefix: 'ds';
+
+/* imports */
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:700|Raleway&display=swap");
+
+/* colors */
+$licorice: #101010;
+$slate-grey: #77878b;
+$granite-grey: #626868;
+$bedazzled-blue: #2f6690;
+$white: #ffffff;
+
+/* timing functions */
+/* type */
+$ds-primary-font: 'Encode Sans Expanded', sans-serif;
+$ds-secondary-font: 'Raleway', sans-serif;
+
+.#{$theme-prefix} {
+	&-title {
+		font-size: 2em;
+		font-family: $ds-primary-font;
+		color: $white;
+		text-transform: lowercase;
+		font-variant: small-caps;
+	} &-subtitle {
+		
+	} &-body {
+		
+	}
+}
+
+.container-gradient {
+	position: relative;
+	padding: 20px;
+	background: linear-gradient(0deg, $licorice, $granite-grey);
+	min-height: 500px;
+}
+
+.container-gradient:before,
+.container-gradient:after {
+	content: "";
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(
+		45deg,
+		#77878b,
+		#2f6690,
+		#2f6690,
+		#ffffff,
+		#2f6690,
+		#2f6690,
+		#77878b
+	);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.container-gradient:after {
+	filter: blur(50px);
+}
