@@ -1,5 +1,7 @@
+/* imports fonts from google fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200|Raleway:200&display=swap');
 
+/* imports from local directories */
 @import './variables';
 @import './typography';
 @import './animations';
@@ -10,6 +12,7 @@
 @import './background';
 @import './landing';
 @import './about';
+@import './contact';
 @import './scss_toolkit/flexbox';
 @import './scss_toolkit/placement';
 @import './scss_toolkit/scrollbar';

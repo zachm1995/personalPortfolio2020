@@ -2,6 +2,8 @@
 
 body {
 	cursor: none;
+} a:hover {
+	cursor: none;
 }
 
 #cursor {
@@ -14,6 +16,7 @@ body {
 	top: 0;
 	left: 0;
 	border: 2px solid $grey;
+	transition: transform 1s;
 	& > #inner-cursor {
 		width: 20%;
 		height: 20%;
@@ -22,9 +25,9 @@ body {
 		position: relative;
 		top: 40%;
 		left: 40%;
+		transition: 0s;
 	}
 	&.cursor-hover {
-		transition: transform 1s;
 		background-color: $slate;
 		border-color: $white;
 		transform: scale(1.5);

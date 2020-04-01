@@ -12,7 +12,10 @@ import { Route, Switch } from "react-router-dom";
 export default function Index(props) {
 	const [navigationActive, setNavigationActive] = useState(false);
 	const [cursorHover, setCursorHover] = useState(false);
-	const [backgroundColor, setBackgroundColor] = useState("purple-gradient");
+	const [background, setBackground] = useState({
+		color: "purple",
+		type: "gradient",
+	});
 	const [browserType, setBrowserType] = useState("");
 
 	const location = useLocation();
@@ -35,13 +38,13 @@ export default function Index(props) {
 	function renderSwitch(pathname) {
 		switch (pathname) {
 			case "/":
-				return setBackgroundColor("gradient-purple");
+				return setBackground({ color: "purple", type: "gradient" });
 			case "/about":
-				return setBackgroundColor("ele");
+				return setBackground({ color: "ele", type: "gradient" });
 			case "/contact":
-				return setBackgroundColor("gradient-slate");
+				return setBackground({ color: "red white", type: "patchwork" });
 			default:
-				return setBackgroundColor("gradient-purple");
+				return setBackground({ color: "purple", type: "gradient" });
 		}
 	}
 
@@ -49,17 +52,14 @@ export default function Index(props) {
 		<div>
 			<Background
 				navigationActive={navigationActive}
-				backgroundColor={backgroundColor}
+				background={background}
 			/>
-			<Cursor
-				cursorHover={cursorHover}
-				backgroundColor={backgroundColor}
-			/>
+			<Cursor cursorHover={cursorHover} background={background} />
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}
 				handleHoverableElement={handleHoverableElement}
-				backgroundColor={backgroundColor}
+				background={background}
 			/>
 			<Switch>
 				{!navigationActive && (

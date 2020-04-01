@@ -1,4 +1,5 @@
-@import './variables';
+@import "./variables";
+@import "./dark_and_stormy/main";
 
 .site-background-container {
 	@include purple-gradient-background;
@@ -9,12 +10,54 @@
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	&.gradient-purple {
+	&.purple {
 		@include purple-gradient-background;
-	} &.gradient-slate {
+	}
+	&.slate {
 		@include slate-gradient-background;
-	} &.ele {
+	}
+	&.ele {
 		background: $beige;
+	}
+}
+
+.patchwork-background-container {
+	@extend .site-background-container;
+	display: flex;
+	flex-wrap: wrap;
+
+	/* Top Left Quadrant */
+	@for $i from 1 through 5 {
+		@for $j from 1 through 5 {
+			& > *.patch-row-#{$i}.patch-col-#{$j} {
+				background-color: $licorice !important;
+			}
+		}
+	}
+
+/* Bottom Left Quadrant */
+	@for $i from 6 through 10 {
+		@for $j from 1 through 5 {
+			& > *.patch-row-#{$i}.patch-col-#{$j} {
+				background-color: $licorice !important;
+			}
+		}
+	}
+/* Top Right Quadrant */
+	@for $i from 1 through 5 {
+		@for $j from 6 through 10 {
+			& > *.patch-row-#{$i}.patch-col-#{$j} {
+				background-color: $granite-grey !important;
+			}
+		}
+	}
+	/* Bottom Right Quadrant */
+	@for $i from 6 through 10 {
+		@for $j from 6 through 10 {
+			& > *.patch-row-#{$i}.patch-col-#{$j} {
+				background-color: $granite-grey !important;
+			}
+		}
 	}
 }
 

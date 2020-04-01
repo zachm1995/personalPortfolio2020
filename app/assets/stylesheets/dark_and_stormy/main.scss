@@ -31,13 +31,15 @@ $ds-secondary-font: 'Raleway', sans-serif;
 
 .#{$theme-prefix} {
 	&-title {
-		font-size: 2em;
+		font-size: 4em;
 		font-family: $ds-primary-font;
 		color: $white;
+	} &-subtitle {
+		font-family: $ds-secondary-font;
+		font-size: 2.5em;
+		color: $bedazzled-blue;
 		text-transform: lowercase;
 		font-variant: small-caps;
-	} &-subtitle {
-		
 	} &-body {
 		
 	}
