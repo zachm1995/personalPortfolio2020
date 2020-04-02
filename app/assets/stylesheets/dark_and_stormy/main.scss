@@ -49,7 +49,7 @@ $ds-secondary-font: "Raleway", sans-serif;
 .gradient-button {
 	position: relative;
 	padding: 20px;
-	background: linear-gradient(90deg, $licorice, $granite-grey);
+	background: linear-gradient(280deg, $licorice, $granite-grey);
 	font-size: 2em;
 	text-transform: lowercase;
 	font-variant: small-caps;
@@ -79,7 +79,12 @@ $ds-secondary-font: "Raleway", sans-serif;
 		animation: steam 20s linear infinite;
 	}
 	&.clicked {
-		background: linear-gradient(90deg, #34eb58, #a2f6b3);
+		/* background: linear-gradient(90deg, #34eb58, #a2f6b3); */
+		color: #34eb58;
+		&:before,
+		&:after {
+			background: linear-gradient(90deg, #34eb58, #a2f6b3);
+		}
 	}
 }
 

@@ -12,11 +12,11 @@ export default function Navigation(props) {
 	const navigationItems = [
 		{
 			title: "Home",
-			link: ""
+			link: "",
 		},
 		{
 			title: "About",
-			link: "about"
+			link: "about",
 		},
 		// {
 		// 	title: "Projects",
@@ -24,8 +24,8 @@ export default function Navigation(props) {
 		// },
 		{
 			title: "Contact",
-			link: "contact"
-		}
+			link: "contact",
+		},
 	];
 
 	function handleMouseMove() {
@@ -42,7 +42,10 @@ export default function Navigation(props) {
 
 	return (
 		<div
-			className={"navigation-menu-container "}
+			className={
+				"navigation-menu-container " +
+				(props.navigationActive ? "active" : "")
+			}
 			onMouseMove={handleMouseMove}
 		>
 			<div className="navigation-background-container">
@@ -102,7 +105,7 @@ export default function Navigation(props) {
 							backgroundPosition["x"] +
 							"% " +
 							backgroundPosition["y"] +
-							"%"
+							"%",
 					}}
 				></div>
 			</div>
