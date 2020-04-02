@@ -2,17 +2,17 @@ import React from "react";
 
 export default function PublicKeyBox(props) {
 	function copyKey(e) {
-		var key = document.getElementById('publicKey').textContent;
+		var key = document.getElementById("publicKey").textContent;
 		var element = e.target;
-		document.execCommand('copy');
+		document.execCommand("copy");
 		element.innerHTML = "Key Copied";
-		element.classList.add('clicked');
+		element.classList.add("clicked");
 	}
 
 	return (
 		<div>
 			<div className="code-box-container">
-				<code id='publicKey' className="code-box">
+				<code id="publicKey" className="code-box">
 					-----BEGIN PGP PUBLIC KEY BLOCK-----
 					mQINBF5IRJ4BEADNzLl0PCYM94jxIvYydMHB1nfRnbZNW2st5PPT2JvDAnw8n3QF
 					gAXsfI6r4Gmk4mHi/TgiJjUUqODnUlYXYro595ZVGcpZvq07d7iH+cr+tSlaA8Zs
@@ -61,12 +61,18 @@ export default function PublicKeyBox(props) {
 					Bcc0yWCaMuAZZlheTzQFAqTNeBZGHTmrDKbLRFCuNNOSlCc5Ue/meGbMibX2FhxH
 					2Dpf80lhNAHsVpzmnhRXXO61rIBdoirc0KWYRbUngPMU2CzEYUfXjYEBRvQvj0Op
 					cPNiiYxA++kIk7k6C4kq0ZnjDfMv/BExGt8vwa9Hr/v+ZZ7cHA6L4guJjH6wCYvb
-					aYSyay5fiQ== =4wiV
-					-----END PGP PUBLIC KEY BLOCK-----
+					aYSyay5fiQ== =4wiV -----END PGP PUBLIC KEY BLOCK-----
 				</code>
 			</div>
 			<div className="spacer"></div>
-			<div className="gradient-button" onClick={(e) => copyKey(e)}>Copy Public Key</div>
+			<div
+				className="gradient-button"
+				onClick={(e) => copyKey(e)}
+				onMouseEnter={() => props.handleHoverableElement(true)}
+				onMouseLeave={() => props.handleHoverableElement(false)}
+			>
+				Copy Public Key
+			</div>
 		</div>
 	);
 }

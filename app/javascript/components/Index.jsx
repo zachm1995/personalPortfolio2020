@@ -78,7 +78,15 @@ export default function Index(props) {
 					<Route exact path="/about" component={About} />
 				)}
 				{!navigationActive && (
-					<Route exact path="/contact" component={Contact} />
+					<Route
+						exact
+						path="/contact"
+						render={() => (
+							<Contact
+								handleHoverableElement={handleHoverableElement}
+							/>
+						)}
+					/>
 				)}
 			</Switch>
 		</div>

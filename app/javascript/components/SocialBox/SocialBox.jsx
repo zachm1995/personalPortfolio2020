@@ -55,6 +55,7 @@ export default function SocialBox(props) {
 						icon={item.icon}
 						numItems={numItems}
 						key={index}
+						handleHoverableElement={props.handleHoverableElement}
 					/>
 				);
 			})}
