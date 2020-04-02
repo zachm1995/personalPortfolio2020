@@ -1,7 +1,5 @@
 import React from "react";
 import ContactPattern from "./ContactPattern";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import SocialBox from "../SocialBox/SocialBox";
 import PublicKeyBox from "../PublicKeyBox";
 
