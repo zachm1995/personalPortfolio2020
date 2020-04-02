@@ -39,7 +39,7 @@
 	@for $i from 6 through 10 {
 		@for $j from 1 through 5 {
 			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $licorice !important;
+				background-color: $granite-grey !important;
 			}
 		}
 	}
@@ -55,7 +55,7 @@
 	@for $i from 6 through 10 {
 		@for $j from 6 through 10 {
 			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $granite-grey !important;
+				background-color: $licorice !important;
 			}
 		}
 	}

@@ -12,7 +12,7 @@
  * scrollout.js
  */
 
-$theme-prefix: 'ds';
+$theme-prefix: "ds";
 
 /* imports */
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:700|Raleway&display=swap");
@@ -26,53 +26,61 @@ $white: #ffffff;
 
 /* timing functions */
 /* type */
-$ds-primary-font: 'Encode Sans Expanded', sans-serif;
-$ds-secondary-font: 'Raleway', sans-serif;
+$ds-primary-font: "Encode Sans Expanded", sans-serif;
+$ds-secondary-font: "Raleway", sans-serif;
 
 .#{$theme-prefix} {
 	&-title {
 		font-size: 4em;
 		font-family: $ds-primary-font;
 		color: $white;
-	} &-subtitle {
+	}
+	&-subtitle {
 		font-family: $ds-secondary-font;
 		font-size: 2.5em;
 		color: $bedazzled-blue;
 		text-transform: lowercase;
 		font-variant: small-caps;
-	} &-body {
-		
+	}
+	&-body {
 	}
 }
 
-.container-gradient {
+.gradient-button {
 	position: relative;
 	padding: 20px;
-	background: linear-gradient(0deg, $licorice, $granite-grey);
-	min-height: 500px;
-}
-
-.container-gradient:before,
-.container-gradient:after {
-	content: "";
-	position: absolute;
-	left: -2px;
-	top: -2px;
-	background: linear-gradient(
-		45deg,
-		#77878b,
-		#2f6690,
-		#2f6690,
-		#ffffff,
-		#2f6690,
-		#2f6690,
-		#77878b
-	);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: steam 20s linear infinite;
+	background: linear-gradient(90deg, $licorice, $granite-grey);
+	font-size: 2em;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-family: $ds-secondary-font;
+	color: $white;
+	transition: 2s;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		left: -2px;
+		top: -2px;
+		background: linear-gradient(
+			45deg,
+			#77878b,
+			#2f6690,
+			#2f6690,
+			#ffffff,
+			#2f6690,
+			#2f6690,
+			#77878b
+		);
+		background-size: 400%;
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		z-index: -1;
+		animation: steam 20s linear infinite;
+	}
+	&.clicked {
+		background: linear-gradient(90deg, #34eb58, #a2f6b3);
+	}
 }
 
 @keyframes steam {

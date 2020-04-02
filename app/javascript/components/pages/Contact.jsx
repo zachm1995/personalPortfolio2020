@@ -2,19 +2,20 @@ import React from "react";
 import ContactPattern from "./ContactPattern";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import SocialBox from "../SocialBox/SocialBox";
 import PublicKeyBox from "../PublicKeyBox";
 
 export default function Contact() {
 	return (
-		<div className="split-screen-container">
-		<div className="spacer"></div>
-			<div className="left">
+		<div className="page-container">
 			<div className="flex center">
-				<div className="ds-title">Let's get in touch</div>
-			</div>
-			</div>
-			<div className="right">
-				<div className="center ds-title">Something Title</div>
+				<div className="center">
+					<div className="ds-title">Let's get in touch</div>
+					<div className="spacer"></div>
+					<SocialBox />
+					<div className="spacer"></div>
+					<PublicKeyBox />
+				</div>
 			</div>
 		</div>
 	);

@@ -22,10 +22,10 @@ export default function Navigation(props) {
 		// 	title: "Projects",
 		// 	link: "portfolio"
 		// },
-		// {
-		// 	title: "Contact",
-		// 	link: "contact"
-		// }
+		{
+			title: "Contact",
+			link: "contact"
+		}
 	];
 
 	function handleMouseMove() {

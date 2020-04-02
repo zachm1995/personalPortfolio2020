@@ -42,7 +42,7 @@ export default function Index(props) {
 			case "/about":
 				return setBackground({ color: "ele", type: "gradient" });
 			case "/contact":
-				return setBackground({ color: "red white", type: "patchwork" });
+				return setBackground({ color: "slate", type: "gradient" });
 			default:
 				return setBackground({ color: "purple", type: "gradient" });
 		}

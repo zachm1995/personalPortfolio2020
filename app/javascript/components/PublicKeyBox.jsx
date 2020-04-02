@@ -1,10 +1,18 @@
 import React from "react";
 
 export default function PublicKeyBox(props) {
+	function copyKey(e) {
+		var key = document.getElementById('publicKey').textContent;
+		var element = e.target;
+		document.execCommand('copy');
+		element.innerHTML = "Key Copied";
+		element.classList.add('clicked');
+	}
+
 	return (
 		<div>
 			<div className="code-box-container">
-				<code className="code-box">
+				<code id='publicKey' className="code-box">
 					-----BEGIN PGP PUBLIC KEY BLOCK-----
 					mQINBF5IRJ4BEADNzLl0PCYM94jxIvYydMHB1nfRnbZNW2st5PPT2JvDAnw8n3QF
 					gAXsfI6r4Gmk4mHi/TgiJjUUqODnUlYXYro595ZVGcpZvq07d7iH+cr+tSlaA8Zs
@@ -57,6 +65,8 @@ export default function PublicKeyBox(props) {
 					-----END PGP PUBLIC KEY BLOCK-----
 				</code>
 			</div>
+			<div className="spacer"></div>
+			<div className="gradient-button" onClick={(e) => copyKey(e)}>Copy Public Key</div>
 		</div>
 	);
 }
