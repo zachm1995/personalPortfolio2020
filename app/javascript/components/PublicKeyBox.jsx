@@ -10,7 +10,7 @@ export default function PublicKeyBox(props) {
 	}
 
 	return (
-		<div>
+		<div className="code-box-wrapper">
 			<div className="code-box-container">
 				<code id="publicKey" className="code-box">
 					-----BEGIN PGP PUBLIC KEY BLOCK-----

@@ -47,15 +47,12 @@ $ds-secondary-font: "Raleway", sans-serif;
 }
 
 .gradient-button {
+	@extend .ds-subtitle;
 	position: relative;
 	padding: 20px;
 	background: linear-gradient(280deg, $licorice, $granite-grey);
-	font-size: 2em;
-	text-transform: lowercase;
-	font-variant: small-caps;
-	font-family: $ds-secondary-font;
-	color: $white;
 	transition: 2s;
+	color: $white;
 	&:before,
 	&:after {
 		content: "";
@@ -102,4 +99,17 @@ $ds-secondary-font: "Raleway", sans-serif;
 
 .container-gradient:after {
 	filter: blur(50px);
+}
+
+@media screen and (max-width: 800px) {
+	.#{$theme-prefix} {
+		&-title {
+			font-size: 2em;
+		}
+		&-subtitle {
+			font-size: 1.5em;
+		}
+		&-body {
+		}
+	}
 }

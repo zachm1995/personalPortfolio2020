@@ -1,20 +1,25 @@
 .contact-icon {
 	height: 300px;
-} .code-box-container {
-	display: block;
-	margin: 0 auto;
-	background-color: black;
-	height: 338px;
-	width: 600px;
-	overflow: hidden;
-	color: green;
-	border: 1px solid white;
-	padding: 20px;
-	position: relative;
-	& > .code-box {
+}
+.code-box-wrapper {
+	width: 100%;
+	& > .code-box-container {
 		display: block;
-		overflow: scroll;
-		text-align: center;
-		max-height: 100%;
+		margin: 0 auto;
+		background-color: black;
+		max-height: 338px;
+		width: 100%;
+		overflow: hidden;
+		color: green;
+		border: 1px solid white;
+		box-sizing: border-box;
+		padding: 20px;
+		position: relative;
+		& > .code-box {
+			display: block;
+			overflow: scroll;
+			text-align: center;
+			max-height: 100%;
+		}
 	}
 }

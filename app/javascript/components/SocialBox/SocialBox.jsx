@@ -42,10 +42,13 @@ export default function SocialBox(props) {
 	const [numItems, setNumItems] = useState(items.length);
 
 	return (
-		<div className="social-box-container" style={{
-			height: '100px',
-			width: '400px'
-		}}>
+		<div
+			className="social-box-container"
+			style={{
+				width: "500px",
+				maxWidth: "100%",
+			}}
+		>
 			{items.map((item, index) => {
 				return (
 					<SocialBoxItem
