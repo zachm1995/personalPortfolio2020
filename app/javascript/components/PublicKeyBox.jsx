@@ -2,18 +2,24 @@ import React from "react";
 
 export default function PublicKeyBox(props) {
 	function copyKey(e) {
-		var key = document.getElementById("publicKey").textContent;
-		var element = e.target;
-		document.execCommand("copy");
+		let key = document.getElementById("publicKey");
+		let element = e.target;
 		element.innerHTML = "Key Copied";
 		element.classList.add("clicked");
+		key.select();
+		key.setSelectionRange(0, 99999);
+		document.execCommand("copy");
+		
 	}
 
 	return (
 		<div className="code-box-wrapper">
 			<div className="code-box-container">
-				<code id="publicKey" className="code-box">
-					-----BEGIN PGP PUBLIC KEY BLOCK-----
+				<input
+					type="text-field"
+					id="publicKey"
+					className="code-box"
+					value="-----BEGIN PGP PUBLIC KEY BLOCK-----
 					mQINBF5IRJ4BEADNzLl0PCYM94jxIvYydMHB1nfRnbZNW2st5PPT2JvDAnw8n3QF
 					gAXsfI6r4Gmk4mHi/TgiJjUUqODnUlYXYro595ZVGcpZvq07d7iH+cr+tSlaA8Zs
 					xQUCaSD43gcCy99MHpxnC68QF5SjqZLgqGGhGLvJGs3BXN7eeXHjbLUHhsCKl3W+
@@ -61,8 +67,8 @@ export default function PublicKeyBox(props) {
 					Bcc0yWCaMuAZZlheTzQFAqTNeBZGHTmrDKbLRFCuNNOSlCc5Ue/meGbMibX2FhxH
 					2Dpf80lhNAHsVpzmnhRXXO61rIBdoirc0KWYRbUngPMU2CzEYUfXjYEBRvQvj0Op
 					cPNiiYxA++kIk7k6C4kq0ZnjDfMv/BExGt8vwa9Hr/v+ZZ7cHA6L4guJjH6wCYvb
-					aYSyay5fiQ== =4wiV -----END PGP PUBLIC KEY BLOCK-----
-				</code>
+					aYSyay5fiQ== =4wiV -----END PGP PUBLIC KEY BLOCK-----"
+				></input>
 			</div>
 			<div className="spacer"></div>
 			<div
