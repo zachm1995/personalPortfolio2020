@@ -11,7 +11,7 @@
 	Styling is handled with SCSS (SASS).
 
 ## Live Site
-	[Click here to view the live site](https://www.zach19.com)
+	[Click here to view the live site](https://www.zach19.com "Personal Website")
 
 ## TODO:
 	- [ ] Change cursor color pallete on different themes
