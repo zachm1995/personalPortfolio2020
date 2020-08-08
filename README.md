@@ -1,24 +1,16 @@
-# README
+# Personal Portfolio 2020 Redesign
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+	This portfolio was built to get aquainted with the Rails 6 with react front-end app design. It uses Ruby 2.6.5 and Rails 6.0.3.
 
-* Ruby version
+	The Javacript is ES6 with React 16.3.
 
-* System dependencies
+	Styling is handled with SCSS (SASS).
 
-* Configuration
+## Live Site
+	The live site
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## TODO:
+	- [ ] Change cursor color pallete on different themes
+	- [ ] Rework the contact page
