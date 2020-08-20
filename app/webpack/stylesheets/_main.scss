@@ -6,7 +6,8 @@
 @import './variables';
 @import './typography';
 @import './animations';
-@import './cursor';
+
+@import '../components/cursor/cursor';
 @import './header';
 @import './footer';
 @import './background';

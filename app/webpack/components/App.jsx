@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Background from "./Background";
-import Cursor from "./Cursor";
+import Cursor from "./cursor/Cursor";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";

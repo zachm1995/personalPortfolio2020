@@ -1,12 +1,11 @@
-@import 'variables';
-
+/* Remove Default Cursor */
 body {
 	cursor: none;
 } a:hover {
 	cursor: none;
 }
 
-#cursor {
+.cursor {
 	pointer-events: none;
 	z-index: 11;
 	width: 20px;
@@ -17,7 +16,8 @@ body {
 	left: 0;
 	border: 2px solid $grey;
 	transition: transform 1s;
-	& > #inner-cursor {
+
+	&__dot {
 		width: 20%;
 		height: 20%;
 		background-color: $white;
@@ -27,12 +27,14 @@ body {
 		left: 40%;
 		transition: 0s;
 	}
-	&.cursor-hover {
+
+	&--hover {
 		background-color: $slate;
 		border-color: $white;
 		transform: scale(1.5);
 	}
-	&.cursor-click {
+
+	&--click {
 		&:after {
 			content: '';
 			width: 100%;
@@ -41,7 +43,7 @@ body {
 			position: absolute;
 			top: 0px;
 			left: 0px;
-			animation: cursorHoverAnimation 1s 1 forwards ease;
+			animation: cursorHoverAnimation .8s 1 forwards ease;
 			z-index: 11;
 		}
 	}
@@ -57,7 +59,7 @@ body {
 }
 
 @media screen and (max-width: 800px) { 
-	#cursor {
+	.cursor {
 		display: none;
 	}
 }
