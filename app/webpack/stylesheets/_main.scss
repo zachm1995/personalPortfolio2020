@@ -1,0 +1,41 @@
+/* imports fonts from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200|Raleway:200&display=swap');
+
+/* Import SCSS Partials */
+
+@import './variables';
+@import './typography';
+@import './animations';
+@import './cursor';
+@import './header';
+@import './footer';
+@import './background';
+@import './landing';
+@import './about';
+@import './contact';
+@import './scss_toolkit/flexbox';
+@import './scss_toolkit/placement';
+@import './scss_toolkit/scrollbar';
+@import './light_and_elegant/main';
+@import './dark_and_stormy/main';
+
+/* Reset body */
+
+body {
+	margin: 0px;
+	padding-top: $header-height;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Link Style */
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
+}
