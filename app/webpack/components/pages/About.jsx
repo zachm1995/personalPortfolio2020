@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import ScrollOut from "scroll-out";
 import Arrow from "images/arrow.svg";
 import UnitedStatesTravelMap from "images/travel_map.svg";
 import Guitar from "images/guitar.png";
@@ -12,30 +11,22 @@ import PADI from "images/padi.png";
 import Code from "images/code.svg";
 
 export default function About(props) {
-	useEffect(() => {
-		ScrollOut();
-	}, []);
-
 	return (
-		<div className="page-container ele-page">
+		<div className="page-container ele-page" data-animate>
 			<div className="ele-section">
-				<div className="ele-title center" data-scroll>
-					Zach Mumbauer
-				</div>
-				<div className="ele-subtitle center" data-scroll>
-					The concise version
-				</div>
+				<div className="ele-title center">Zach Mumbauer</div>
+				<div className="ele-subtitle center">The concise version</div>
 			</div>
 
-			<div className="ele-section">
-				<div className="ele-blurb" data-scroll>
+			<div className="ele-section" data-animate>
+				<div className="ele-blurb">
 					My life’s aspiration is to leverage technology and socially
 					conscientious business practices to create a lasting,
 					positive impact for as many people as possible.
 				</div>
 			</div>
 
-			<div className="ele-section">
+			<div className="ele-section" data-animate>
 				<div className="ele-subtitle center">Scroll</div>
 				<img
 					src={Arrow}
@@ -46,22 +37,18 @@ export default function About(props) {
 			<div className="spacer"></div>
 			<div className="ele-section">
 				<div className="flex flex-2">
-					<div>
+					<div data-animate>
 						<img
 							src={UnitedStatesTravelMap}
-							className="about-image"
+							className="about-image animate"
 							alt="a map of the United States showing only Hawaii as the only untraveled state"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
-							I've been around
-						</div>
+						<div className="ele-title center">I've been around</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
 							49 states and 23 countries so far
 						</div>
@@ -72,19 +59,17 @@ export default function About(props) {
 							src={EagleBadge}
 							className="about-image"
 							alt="an Eagle Scout patch"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I'm an Eagle Scout
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
-							with 78 merit badges
+							with 79 merit badges
 						</div>
 					</div>
 
@@ -93,17 +78,15 @@ export default function About(props) {
 							src={Guitar}
 							className="about-image"
 							alt="an acoustic guitar"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I like to play music
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
 							piano, guitar, percussion, and vocals
 						</div>
@@ -114,17 +97,15 @@ export default function About(props) {
 							src={Microphone}
 							className="about-image"
 							alt="a microphone"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I won an award for vocals
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
 							and sang with a vocal group in Carnegie Hall
 						</div>
@@ -135,19 +116,17 @@ export default function About(props) {
 							src={Latte}
 							className="about-image"
 							alt="a picture of a latte"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I take my coffee black
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
-							but I'm good at pouring milk into cups
+							but I'm good at pouring milk
 						</div>
 					</div>
 
@@ -156,17 +135,15 @@ export default function About(props) {
 							src={EMT}
 							className="about-image"
 							alt="an EMT symbol"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I took EMT training
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
 							and luckily never had to use it
 						</div>
@@ -177,17 +154,15 @@ export default function About(props) {
 							src={Code}
 							className="about-image"
 							alt="a symbol for coding"
-							data-scroll
 						/>
-						<div className="ele-title center" data-scroll>
+						<div className="ele-title center">
 							I like disruption
 						</div>
 						<div
 							className="ele-body center"
 							style={{
-								marginTop: "-40px"
+								marginTop: "-40px",
 							}}
-							data-scroll
 						>
 							I've worked at four start-ups
 						</div>

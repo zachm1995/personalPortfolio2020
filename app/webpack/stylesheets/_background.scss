@@ -1,8 +1,6 @@
-@import "./variables";
-@import "./dark_and_stormy/main";
+/* AppBackground.jsx */
 
-.site-background-container {
-	@include purple-gradient-background;
+.background {
 	transition: 1s;
 	z-index: -10;
 	width: 100vw;
@@ -10,59 +8,13 @@
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	&.purple {
+	&--purple {
 		@include purple-gradient-background;
 	}
-	&.slate {
+	&--slate {
 		@include slate-gradient-background;
-	}
-	&.ele {
-		background: $beige;
-	}
-}
-
-.patchwork-background-container {
-	@extend .site-background-container;
-	display: flex;
-	flex-wrap: wrap;
-
-	/* Top Left Quadrant */
-	@for $i from 1 through 5 {
-		@for $j from 1 through 5 {
-			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $licorice !important;
-			}
-		}
-	}
-
-/* Bottom Left Quadrant */
-	@for $i from 6 through 10 {
-		@for $j from 1 through 5 {
-			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $granite-grey !important;
-			}
-		}
-	}
-/* Top Right Quadrant */
-	@for $i from 1 through 5 {
-		@for $j from 6 through 10 {
-			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $granite-grey !important;
-			}
-		}
-	}
-	/* Bottom Right Quadrant */
-	@for $i from 6 through 10 {
-		@for $j from 6 through 10 {
-			& > *.patch-row-#{$i}.patch-col-#{$j} {
-				background-color: $licorice !important;
-			}
-		}
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	.site-background-container {
-		border: none;
-	}
 }

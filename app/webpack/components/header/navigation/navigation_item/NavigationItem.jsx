@@ -5,27 +5,16 @@ export default function NavigationItem(props) {
 	const [itemActive, setItemActive] = useState(false);
 
 	return (
-		<div
-			className={
-				`navigation-item hoverable`
-			}
-			onMouseEnter={() => {
-				setItemActive(true);
-			}}
-			onMouseLeave={() => {
-				setItemActive(false);
-			}}
-			onClick={() => {
-				props.toggleNavigation();
-			}}
-		>
 			<Link
 				className={
-					(itemActive ? "nav-item-active " : "")
-				} to={'/' + props.link}
+					`navigation-item hoverable ${itemActive ? "navigation-item--active " : ""} ${props.active ? 'animate fadeDown' : 'animate fadeOutUp'}`
+				}
+				style={{
+					animationDelay: `${props.animationDelay}s`
+				}}
+				to={'/' + props.link}
 			>
 				{props.title}
 			</Link>
-		</div>
 	);
 }

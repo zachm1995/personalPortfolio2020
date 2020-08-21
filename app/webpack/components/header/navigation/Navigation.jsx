@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NavigationItem from "./navigation_item/NavigationItem";
 
 export default function Navigation(props) {
-
 	const navigationItems = [
 		{
 			title: "Home",
@@ -18,27 +17,17 @@ export default function Navigation(props) {
 		},
 	];
 
-	const renderNavigationItems = (items) => {
-		items.map((item, index) => {
-			return (
-				<NavigationItem
-					title={item.title}
-					link={item.link}
-					key={index}
-					handleHoverableElement={props.handleHoverableElement}
-					toggleNavigation={props.toggleNavigation}
-				/>
-			);
-		});
-	};
+	const renderNavigationItems = navigationItems.map((item, index) => {
+		return (
+			<NavigationItem
+				key={index}
+				title={item.title}
+				link={item.link}
+				animationDelay={index * 0.2}
+				active={props.active}
+			/>
+		);
+	});
 
-	return (
-		<nav
-			className={`navigation ${
-				props.active ? "navigation--active" : ""
-			}`}
-		>
-			{renderNavigationItems(navigationItems)}
-		</nav>
-	);
+	return <nav className={`navigation`}>{renderNavigationItems}</nav>;
 }

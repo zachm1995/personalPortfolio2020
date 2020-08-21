@@ -1,6 +1,5 @@
-@import 'light_and_elegant/main';
+/* Colors */
 
-// Colors
 $white: #ffffff;
 $grey: #7f7f7f;
 $grey-dark: #222222;
@@ -28,25 +27,14 @@ $gradient-slate: linear-gradient(
 	#191919
 	);
 
-$gradient-ele: linear-gradient(
-	280deg,
-	$beige,
-	$grey,
-	$blue-grey,
-	$grey,
-	$beige
-	);
 
-// type
-// Typefaces
-$font-primary: "Raleway", sans-serif;
-$font-secondary: "Montserrat", sans-serif;
+/* Typography */
 
-// Header Settings
-$header-height: 100px;
-$header-background: $transparent;
+$font-main: "Raleway", sans-serif;
+$font-alt: "Montserrat", sans-serif;
 
-// Animation
+/* Animations */
+
 $ease-timing: cubic-bezier(0.8, 0, 0.2, 1);
 $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 
@@ -57,12 +45,6 @@ $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 }
 @mixin slate-gradient-background {
 	background: $gradient-slate;
-	background-size: 4000% 4000%;
-	animation: gradientAnimation 50s ease infinite;
-}
-
-@mixin ele-gradient-background {
-	background: $gradient-ele;
 	background-size: 4000% 4000%;
 	animation: gradientAnimation 50s ease infinite;
 }

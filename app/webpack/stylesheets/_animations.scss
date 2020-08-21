@@ -1,10 +1,20 @@
-// Modified from Daniel Eden's animate.css library
-@import 'variables';
+/* Modified from Daniel Eden's animate.css library */
+
+
+/* Elements that are animated should start without visibility */
+[data-animate] {
+  opacity: 0;
+}
 
 .animate {
-  animation-duration: 3s;
+  animation-duration: 1s;
+  &--fast {
+   animation-duration: .8s; 
+  }
+  &--slow {
+    animation-duration: 3s;
+  }
   animation-fill-mode: both;
-  animation-timing-function: $ease-timing-alt;
 }
 
 @keyframes fadeUp {
@@ -15,7 +25,7 @@
 
   to {
     opacity: 1;
-    transform: translate3d(0, -50, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -49,6 +59,22 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutUp {
+  animation-name: fadeOutDown;
 }
 
 .fadeDown {

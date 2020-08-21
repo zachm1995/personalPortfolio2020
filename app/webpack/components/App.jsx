@@ -1,93 +1,66 @@
 import React, { Component, useState, useEffect } from "react";
+import Scrollbar from "smooth-scrollbar";
 import Header from "./header/Header";
+import Landing from "./pages/landing/Landing";
+import CardRow from './card_row/CardRow';
 import Footer from "./footer/Footer";
-import Background from "./Background";
+import Background from "./background/Background";
 import Cursor from "./cursor/Cursor";
-import Landing from "./pages/Landing";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { useLocation } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 
-export default function Index(props) {
-	const [navigationActive, setNavigationActive] = useState(false);
-	const [background, setBackground] = useState({
-		color: "purple",
-		type: "gradient",
-	});
-	const [browserType, setBrowserType] = useState("");
+export default function App(props) {
 
-	const location = useLocation();
-	let pathname = location.pathname;
-
-	function toggleNavigation() {
-		setNavigationActive(!navigationActive);
-	}
-	const headerHeight = 100;
-	const footerHeight = 0;
-
-	function handleHoverableElement(state) {
-		setCursorHover(state);
-	}
-
+	// Initialized Scroll and Animation Handling
 	useEffect(() => {
-		renderSwitch(pathname);
-	}, [pathname]);
 
-	function renderSwitch(pathname) {
-		switch (pathname) {
-			case "/":
-				return setBackground({ color: "purple", type: "gradient" });
-			case "/about":
-				return setBackground({ color: "ele", type: "gradient" });
-			case "/contact":
-				return setBackground({ color: "slate", type: "gradient" });
-			default:
-				return setBackground({ color: "purple", type: "gradient" });
-		}
-	}
+		// Handles momentum scrolling
+		Scrollbar.init(document.querySelector("#scrollingContainer"), {
+			damping: 0.05
+		});
+		
+		// Tracks when animated elements enter viewport
+		const animationObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				
+				const animationType = entry.target.dataset.animate.split(',')[0].trim();
+				console.log(animationType);
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate', `${animationType}`);
+				} else {
+					entry.target.classList.remove('animate', `${animationType}`);
+				}
+			})
+		}, {
+			root: document.getElementById('scrollingContainer'),
+			threshold: .25
+		});
+
+		// Collects all elements to be animated into view
+		document.querySelectorAll('[data-animate]').forEach((element) => {
+			animationObserver.observe(element);
+		})
+
+
+	}, []);
 
 	return (
-		<div>
-			<Background
-				navigationActive={navigationActive}
-				background={background}
-			/>
-			<Cursor background={background} />
-			<Header
-				toggleNavigation={toggleNavigation}
-				navigationActive={navigationActive}
-				handleHoverableElement={handleHoverableElement}
-				background={background}
-			/>
-			<Switch>
-				{!navigationActive && (
-					<Route
-						exact
-						path="/"
-						render={() => (
-							<Landing
-								headerHeight={headerHeight}
-								footerHeight={footerHeight}
-							/>
-						)}
-					/>
-				)}
-				{!navigationActive && (
+		<div className="app">
+			<Background color="purple" gradient="true" />
+			<Cursor />
+			<Header />
+			<div className="app__content-container" id="scrollingContainer">
+				<Landing />
+				<CardRow title="Some Projects" />
+				<About />
+				<Switch>
 					<Route exact path="/about" component={About} />
-				)}
-				{!navigationActive && (
-					<Route
-						exact
-						path="/contact"
-						render={() => (
-							<Contact
-								handleHoverableElement={handleHoverableElement}
-							/>
-						)}
-					/>
-				)}
-			</Switch>
+
+					<Route exact path="/contact" render={() => <Contact />} />
+				</Switch>
+			</div>
 		</div>
 	);
 }
