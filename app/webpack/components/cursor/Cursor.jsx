@@ -3,6 +3,7 @@ import { useMousePosition } from "../../custom_hooks/useMousePosition";
 
 export default function Cursor(props) {
 	const mousePosition = useMousePosition();
+	const [cursorHover, setCursorHover] = useState(false);
 	const [scrollTop, setScrollTop] = useState(window.pageYOffset);
 	const cursorRef = useRef();
 
@@ -12,9 +13,16 @@ export default function Cursor(props) {
 
 	useEffect(() => {
 		window.addEventListener("click", () => handleCursorClick());
+		window.addEventListener('mousemove', (e) => {
+			if(document.querySelectorAll('.hoverable:hover').length > 0) {
+				setCursorHover(true);
+			} else {
+				setCursorHover(false);
+			}
+		})
 	}, []);
 
-	function handleCursorClick() {
+	const handleCursorClick = () => {
 		cursorRef.current.classList.add("cursor--click");
 		setTimeout(() => {
 			cursorRef.current.classList.remove("cursor--click");
@@ -24,7 +32,7 @@ export default function Cursor(props) {
 	return (
 		<div
 			ref={cursorRef}
-			className={`cursor ${props.cursorHover ? "cursor--hover" : ""}`}
+			className={`cursor ${cursorHover ? "cursor--hover" : ""}`}
 			style={{
 				top: mousePosition["y"] - 10 - scrollTop + "px",
 				left: mousePosition["x"] - 10 + "px",

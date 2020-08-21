@@ -7,8 +7,18 @@
 @import './typography';
 @import './animations';
 
+/* Custom Mouse Cursor */
 @import '../components/cursor/cursor';
-@import './header';
+
+/* Header */
+@import '../components/header/header';
+
+/* Navigation Container */
+@import '../components/header/navigation/navigation';
+
+/* Navigation Items */
+@import '../components/header/navigation/navigation_item/navigation_item';
+
 @import './footer';
 @import './background';
 @import './landing';

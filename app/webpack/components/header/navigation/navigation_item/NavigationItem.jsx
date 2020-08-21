@@ -7,18 +7,13 @@ export default function NavigationItem(props) {
 	return (
 		<div
 			className={
-				"navigation-menu-item " +
-				(props.navigationActive ? "animate fadeUp" : "")
+				`navigation-item hoverable`
 			}
 			onMouseEnter={() => {
-				props.handleItemHover(true);
 				setItemActive(true);
-				props.handleHoverableElement(true);
 			}}
 			onMouseLeave={() => {
-				props.handleItemHover(false);
 				setItemActive(false);
-				props.handleHoverableElement(false);
 			}}
 			onClick={() => {
 				props.toggleNavigation();

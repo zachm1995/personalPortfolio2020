@@ -1,8 +1,7 @@
-/* Styles regarding the header component */
-@import "./variables";
+/* Header.jsx */
 
-.header-container {
-	display: flex;
+.header {
+	display: none;
 	height: $header-height;
 	background-color: $header-background;
 	width: 100%;
@@ -12,6 +11,9 @@
 	right: 0;
 	box-sizing: border-box;
 	color: $white;
+	&--active {
+		display: flex;
+	}
 }
 
 /* Navigation Toggle Button */

@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NavigationItem from "./NavigationItem";
-import { useMousePosition } from "../../../custom_hooks/useMousePosition";
-import { useScreenSize } from "../../../custom_hooks/useScreenSize";
+import NavigationItem from "./navigation_item/NavigationItem";
 
 export default function Navigation(props) {
-	const mousePosition = useMousePosition();
-	const screenSize = useScreenSize();
-	const [backgroundPosition, setBackgroundPosition] = useState({});
-	const [itemHover, setItemHover] = useState(false);
 
 	const navigationItems = [
 		{
@@ -18,127 +12,33 @@ export default function Navigation(props) {
 			title: "About",
 			link: "about",
 		},
-		// {
-		// 	title: "Projects",
-		// 	link: "portfolio"
-		// },
 		{
 			title: "Contact",
 			link: "contact",
 		},
 	];
 
-	function handleMouseMove() {
-		let mouseX = mousePosition["x"];
-		let mouseY = mousePosition["y"];
-		let backgroundX = (mouseX / window.innerWidth) * 0.1 * 1000;
-		let backgroundY = (mouseY / window.innerHeight) * 0.1 * 1000;
-		setBackgroundPosition({ x: backgroundX, y: backgroundY });
-	}
-
-	function handleItemHover(state) {
-		setItemHover(state);
-	}
+	const renderNavigationItems = (items) => {
+		items.map((item, index) => {
+			return (
+				<NavigationItem
+					title={item.title}
+					link={item.link}
+					key={index}
+					handleHoverableElement={props.handleHoverableElement}
+					toggleNavigation={props.toggleNavigation}
+				/>
+			);
+		});
+	};
 
 	return (
-		<div
-			className={
-				"navigation-menu-container " +
-				(props.navigationActive ? "active" : "")
-			}
-			onMouseMove={handleMouseMove}
+		<nav
+			className={`navigation ${
+				props.active ? "navigation--active" : ""
+			}`}
 		>
-			<div className="navigation-background-container">
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] / 5 + "px" }}
-				></div>
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] / 5 + "px" }}
-				></div>
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] / 5 + "px" }}
-				></div>
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] / 5 + "px" }}
-				></div>
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] / 5 + "px" }}
-				></div>
-				<div
-					className={
-						"navigation-background-section " +
-						(props.navigationActive ? "active" : "")
-					}
-					style={{ height: screenSize["y"] + "px" }}
-				></div>
-			</div>
-			<div
-				className={
-					"navigation-menu-left " +
-					(props.navigationActive ? "active" : "")
-				}
-			>
-				<div
-					className="navigation-menu-background-overlay"
-					style={{
-						backgroundPosition:
-							backgroundPosition["x"] +
-							"% " +
-							backgroundPosition["y"] +
-							"%",
-					}}
-				></div>
-			</div>
-			<div
-				className={
-					"navigation-menu-right " +
-					(props.navigationActive ? "active" : "")
-				}
-			>
-				<div
-					className={
-						"navigation-items-container " +
-						(props.navigationActive ? "active" : "")
-					}
-				>
-					{navigationItems.map((item, index) => {
-						return (
-							<NavigationItem
-								title={item.title}
-								link={item.link}
-								navigationActive={props.navigationActive}
-								key={index}
-								handleItemHover={handleItemHover}
-								itemHover={itemHover}
-								handleHoverableElement={
-									props.handleHoverableElement
-								}
-								toggleNavigation={props.toggleNavigation}
-							/>
-						);
-					})}
-				</div>
-			</div>
-		</div>
+			{renderNavigationItems(navigationItems)}
+		</nav>
 	);
 }

@@ -60,3 +60,6 @@ gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
 # Vendor Prefixing
 gem 'autoprefixer-rails', '~> 9.7', '>= 9.7.4'
+
+# Json Serialization
+gem 'fast_jsonapi', '~> 1.5'

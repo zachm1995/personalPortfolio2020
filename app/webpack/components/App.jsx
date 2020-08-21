@@ -11,7 +11,6 @@ import { Route, Switch } from "react-router-dom";
 
 export default function Index(props) {
 	const [navigationActive, setNavigationActive] = useState(false);
-	const [cursorHover, setCursorHover] = useState(false);
 	const [background, setBackground] = useState({
 		color: "purple",
 		type: "gradient",
@@ -54,7 +53,7 @@ export default function Index(props) {
 				navigationActive={navigationActive}
 				background={background}
 			/>
-			<Cursor cursorHover={cursorHover} background={background} />
+			<Cursor background={background} />
 			<Header
 				toggleNavigation={toggleNavigation}
 				navigationActive={navigationActive}

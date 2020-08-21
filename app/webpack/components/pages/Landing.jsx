@@ -26,7 +26,7 @@ export default function Landing(props) {
 	return (
 		<div className="landing-page-container" style={{ height: height }}>
 			<div className="landing-page-centered">
-				<div className={loaded ? "animate fadeDown" : ""}>
+				<div className={`hoverable ${loaded ? "animate fadeDown" : ""}`}>
 					Zach Mumbauer
 				</div>
 				<div>
