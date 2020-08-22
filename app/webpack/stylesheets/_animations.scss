@@ -1,5 +1,17 @@
-/* Modified from Daniel Eden's animate.css library */
+/* Heavily modified from Daniel Eden's animate.css library */
 
+/*
+ * Animation Direction
+ * name x-change y-change
+ */
+
+$directions:
+  "up" 0 100%,
+  "down" 0 -100%,
+  "left" -100% 0,
+  "right" 100% 0;
+
+$types: "in", "out";
 
 /* Elements that are animated should start without visibility */
 [data-animate] {
@@ -9,7 +21,7 @@
 .animate {
   animation-duration: 1s;
   &--fast {
-   animation-duration: .8s; 
+    animation-duration: 0.8s;
   }
   &--slow {
     animation-duration: 3s;
@@ -17,66 +29,37 @@
   animation-fill-mode: both;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+/* Generate Fade */
+@each $direction, $x-change, $y-change in $directions {
+  @each $type in $types {
+    .fade-#{$direction}-#{$type} {
+      animation-name: fade-#{$direction}-#{$type};
+    }
   }
 }
 
-.fadeUp {
-  animation-name: fadeUp;
-}
+@each $type in $types {
+  @each $direction, $x-change, $y-change in $directions {
+    @keyframes fade-#{$direction}-#{$type} {
+      from {
+        @if $type == "in" {
+          opacity: 0;
+          transform: translate3d($x-change, $y-change, 0);
+        } @else {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
 
-@keyframes fadeLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
+      to {
+        @if $type == "in" {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        } @else {
+          opacity: 0;
+          transform: translate3d($x-change, $y-change, 0);
+        }
+      }
+    }
   }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeLeft {
-  animation-name: fadeLeft;
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeOutDown {
-  from {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-}
-
-.fadeOutUp {
-  animation-name: fadeOutDown;
-}
-
-.fadeDown {
-  animation-name: fadeDown;
 }

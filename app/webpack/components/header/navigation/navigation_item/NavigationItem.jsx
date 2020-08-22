@@ -7,7 +7,7 @@ export default function NavigationItem(props) {
 	return (
 			<Link
 				className={
-					`navigation-item hoverable ${itemActive ? "navigation-item--active " : ""} ${props.active ? 'animate fadeDown' : 'animate fadeOutUp'}`
+					`navigation-item hoverable ${itemActive ? "navigation-item--active " : ""} ${props.active ? 'animate fade-down-in' : 'animate fade-up-out'}`
 				}
 				style={{
 					animationDelay: `${props.animationDelay}s`

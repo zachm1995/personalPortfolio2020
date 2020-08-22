@@ -6,7 +6,6 @@ import CardRow from './card_row/CardRow';
 import Footer from "./footer/Footer";
 import Background from "./background/Background";
 import Cursor from "./cursor/Cursor";
-
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { Route, Switch } from "react-router-dom";
@@ -24,13 +23,21 @@ export default function App(props) {
 		// Tracks when animated elements enter viewport
 		const animationObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
+
+				const animationSettings = JSON.parse(entry.target.dataset.animate);
 				
-				const animationType = entry.target.dataset.animate.split(',')[0].trim();
-				console.log(animationType);
-				if (entry.isIntersecting) {
-					entry.target.classList.add('animate', `${animationType}`);
-				} else {
-					entry.target.classList.remove('animate', `${animationType}`);
+				const className = `${animationSettings.animationName}-${animationSettings.animationDirection}-in`
+				
+				// When element enters view
+				if (entry.isIntersecting && animationSettings.animationOn.includes('enter')) {
+					entry.target.classList.add('animate', className);
+				}
+
+				// When element exits view
+				else {
+					if (animationSettings.reanimate === true) {
+						entry.target.classList.remove('animate', className);	
+					}
 				}
 			})
 		}, {
@@ -38,7 +45,7 @@ export default function App(props) {
 			threshold: .25
 		});
 
-		// Collects all elements to be animated into view
+		
 		document.querySelectorAll('[data-animate]').forEach((element) => {
 			animationObserver.observe(element);
 		})
