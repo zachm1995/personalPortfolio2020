@@ -8,8 +8,9 @@ export default function Card(props) {
 		<div
 			className={`card hoverable ${active ? "card--active" : ""}`}
 			data-animate={JSON.stringify({
-				animationName: "fadeDown",
-				animationSpeed: "slow",
+				animationName: "fade",
+				animationDirection: "down",
+				animationSpeed: "fast",
 				animationOn: ["enter"],
 				reanimate: false,
 			})}
