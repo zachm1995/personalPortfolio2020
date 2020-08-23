@@ -28,7 +28,7 @@
 /* Navigation Items */
 @import "../components/header/navigation/navigation_item/navigation_item";
 
-@import "./footer";
+
 
 
 /* Landing Page */
@@ -41,12 +41,15 @@
 @import '../components/card_row/card_row';
 @import '../components/card_row/card/card';
 
+/* Quote Slider */
+@import '../components/quote_slider/quote_slider';
 
 @import "./about";
 @import "./contact";
 @import "./scss_toolkit/scrollbar";
 @import "./light_and_elegant/main";
 @import "./dark_and_stormy/main";
+@import "./footer";
 
 /* Reset body */
 

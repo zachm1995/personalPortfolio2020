@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import QuoteSlider from '../../quote_slider/QuoteSlider';
 import CardRow from "../../card_row/CardRow";
 import Typed from "react-typed";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
@@ -70,7 +71,7 @@ export default function Landing(props) {
 						/>
 					</div>
 				</div>
-				// Quote Slider
+				<QuoteSlider />
 				<CardRow data={projects} />
 				<CardRow data={projects} />
 				<CardRow data={projects} />

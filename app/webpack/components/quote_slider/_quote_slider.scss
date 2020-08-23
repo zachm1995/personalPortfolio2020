@@ -1,0 +1,62 @@
+/* QuoteSlider.jsx */
+
+.quote-slider {
+	background-color: white;
+	box-shadow: inset 0px 0px 50px 0px black;
+	padding: 20vh 10vw;
+	&__title {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	&__quote-text {
+		font-family: $font-main;
+		font-size: 5em;
+		margin-bottom: 20px;
+		position: relative;
+		z-index: 1;
+		&::after {
+			content: '“';
+			position: absolute;
+			top: -100px;
+			opacity: 10%;
+			left: -50px;
+			font-size: 5em;
+			z-index: 0;
+		}
+	}
+	&__author {
+		font-family: $font-alt;
+		font-size: 4em;
+		text-align: right;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.quote-slider {
+		&__quote-text {
+			font-size: 3em;
+			&::after {
+				top: -50px;
+				left: -25px;
+			}
+		}
+		&__author {
+			font-size: 2.5em;
+		}
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.quote-slider {
+		&__quote-text {
+			font-size: 2em;
+			&::after {
+				top: -50px;
+				left: -25px;
+			}
+		}
+		&__author {
+			font-size: 1.5em;
+		}
+	}
+}

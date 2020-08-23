@@ -6,7 +6,6 @@ export default function NavigationItem(props) {
 	const pathname = useLocation().pathname;
 
 	useEffect(() => {
-		console.log(pathname)
 		if (pathname == props.link) {
 			setItemActive(true);
 		} else {
