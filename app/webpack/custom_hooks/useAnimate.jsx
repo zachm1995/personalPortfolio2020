@@ -4,7 +4,6 @@ export const useAnimate = (animationElements) => {
 
 	useEffect(() => {
 		animationElements.forEach((element) => {
-			console.log(element);
 			animationObserver.observe(element);
 		});
 		return () => {
@@ -29,7 +28,6 @@ export const useAnimate = (animationElements) => {
 					entry.isIntersecting &&
 					animationSettings.animationOn.includes("enter")
 				) {
-					console.log(entry);
 					entry.target.classList.add("animate", className);
 
 					if (animationSettings.animationSpeed !== undefined) {

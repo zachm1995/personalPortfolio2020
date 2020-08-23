@@ -20,11 +20,9 @@ $gradient-purple: linear-gradient(
 	);
 $gradient-slate: linear-gradient(
 	280deg,
-	#191919,
-	#3d3d3d,
-	#000000,
-	#3d3d3d,
-	#191919
+	#0A0A0A 0%,
+	#333333 50%,
+	#0A0A0A 100%
 	);
 
 
@@ -45,18 +43,15 @@ $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 }
 @mixin slate-gradient-background {
 	background: $gradient-slate;
-	background-size: 4000% 4000%;
-	animation: gradientAnimation 50s ease infinite;
+	// background-size: 4000% 4000%;
+	// animation: gradientAnimation 50s infinite;
 }
 
 @keyframes gradientAnimation {
 	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 51%;
+		background-position: 0% 0%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 100% 100%;
 	}
 }

@@ -37,14 +37,12 @@ export default function Landing(props) {
 
 	// Sets animation elements for the page
 	useEffect(() => {
-
 		if (screenSize.x > 760) {
-			Scrollbar.init(scrollbarRef.current, {
+			window.SCROLLBAR = Scrollbar.init(scrollbarRef.current, {
 				damping: 0.05
 			});
 		}
 		
-
 		setAnimationElements(document.querySelectorAll("[data-animate]"));
 	}, []);
 
@@ -67,8 +65,8 @@ export default function Landing(props) {
 					<div>
 						<Typed
 							strings={["Tech-centric pantologist"]}
-							typeSpeed={40}
-							startDelay={1200}
+							typeSpeed={30}
+							startDelay={1000}
 						/>
 					</div>
 				</div>

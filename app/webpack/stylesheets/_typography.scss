@@ -4,6 +4,12 @@ body {
 	font-size: 14px;
 }
 
+/* Text Antialiasing */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Headings */
 
 @for $i from 1 through 6 {

@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 export default function App(props) {
 	return (
 		<div className="app">
-			<Background color="purple" gradient="true" />
+			<Background color="black" gradient="true" />
 			<Cursor />
 			<Router>
 				<Header />

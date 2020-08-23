@@ -12,7 +12,7 @@ export default function Header(props) {
 	// Temporarily show header on load
 	useEffect(() => {
 		if (screenSize.x > 800) {
-			setTimeout(() => setHeaderActive(false), 3000);			
+			setTimeout(() => setHeaderActive(false), 3000);
 		}
 	},[])
 

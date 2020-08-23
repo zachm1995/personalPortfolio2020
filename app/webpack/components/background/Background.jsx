@@ -10,9 +10,9 @@ export default function Background(props) {
 
 	return (
 		<div
-			className={`background background--${backgroundSettings.color}`}
+			className={`background background--${props.color}`}
 			style={{
-				backgroundColor: backgroundSettings.color
+				backgroundColor: props.color
 			}}
 		></div>
 	);
