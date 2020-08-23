@@ -50,3 +50,6 @@ export const useAnimate = (animationElements) => {
 		}
 	);
 };
+
+
+// TODO: Add default values for animation settings
