@@ -5,15 +5,15 @@ export default function Navigation(props) {
 	const navigationItems = [
 		{
 			title: "Home",
-			link: "",
+			link: "/",
 		},
 		{
 			title: "About",
-			link: "about",
+			link: "/about",
 		},
 		{
 			title: "Contact",
-			link: "contact",
+			link: "/contact",
 		},
 	];
 
