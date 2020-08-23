@@ -10,11 +10,6 @@ import AboutPage from "./pages/about_page/AboutPage";
 import Contact from "./pages/Contact";
 
 export default function App(props) {
-	const scrollingRef = useRef();
-
-	// Handles momentum scrolling
-	useEffect(() => {}, []);
-
 	return (
 		<div className="app">
 			<Background color="purple" gradient="true" />

@@ -10,6 +10,9 @@
 /* Custom Mouse Cursor */
 @import "../components/cursor/cursor";
 
+/* Background */
+@import "../components/background/background";
+
 /* App Container */
 @import "../components/app";
 
@@ -26,7 +29,7 @@
 @import "../components/header/navigation/navigation_item/navigation_item";
 
 @import "./footer";
-@import "./background";
+
 
 /* Landing Page */
 @import "../components/pages/landing/landing";

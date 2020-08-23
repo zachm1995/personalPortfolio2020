@@ -48,7 +48,6 @@ export const useAnimate = (animationElements) => {
 			});
 		},
 		{
-			root: document.getElementById("scrollingContainer"),
 			threshold: 0.25,
 		}
 	);
