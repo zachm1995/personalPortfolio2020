@@ -38,7 +38,7 @@ export default function Landing(props) {
 	// Sets animation elements for the page
 	useEffect(() => {
 		if (screenSize.x > 760) {
-			window.SCROLLBAR = Scrollbar.init(scrollbarRef.current, {
+			Scrollbar.init(scrollbarRef.current, {
 				damping: 0.05
 			});
 		}
