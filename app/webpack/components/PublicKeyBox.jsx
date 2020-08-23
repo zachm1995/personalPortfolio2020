@@ -9,7 +9,6 @@ export default function PublicKeyBox(props) {
 		key.select();
 		key.setSelectionRange(0, 99999);
 		document.execCommand("copy");
-		
 	}
 
 	return (
@@ -19,7 +18,7 @@ export default function PublicKeyBox(props) {
 					type="text-field"
 					id="publicKey"
 					className="code-box"
-					value="-----BEGIN PGP PUBLIC KEY BLOCK-----
+					defaultValue="-----BEGIN PGP PUBLIC KEY BLOCK-----
 					mQINBF5IRJ4BEADNzLl0PCYM94jxIvYydMHB1nfRnbZNW2st5PPT2JvDAnw8n3QF
 					gAXsfI6r4Gmk4mHi/TgiJjUUqODnUlYXYro595ZVGcpZvq07d7iH+cr+tSlaA8Zs
 					xQUCaSD43gcCy99MHpxnC68QF5SjqZLgqGGhGLvJGs3BXN7eeXHjbLUHhsCKl3W+
@@ -70,12 +69,9 @@ export default function PublicKeyBox(props) {
 					aYSyay5fiQ== =4wiV -----END PGP PUBLIC KEY BLOCK-----"
 				></input>
 			</div>
-			<div className="spacer"></div>
 			<div
 				className="gradient-button"
 				onClick={(e) => copyKey(e)}
-				onMouseEnter={() => props.handleHoverableElement(true)}
-				onMouseLeave={() => props.handleHoverableElement(false)}
 			>
 				Copy Public Key
 			</div>

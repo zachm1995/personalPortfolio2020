@@ -19,6 +19,9 @@ export default function Cursor(props) {
 	// Handles Clicks
 	useEffect(() => {
 		window.addEventListener("click", () => handleCursorClick());
+		return () => {
+			window.removeEventListener("click", () => handleCursorClick());
+		}
 	}, []);
 
 	const handleCursorClick = () => {

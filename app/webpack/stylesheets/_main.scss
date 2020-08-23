@@ -31,6 +31,9 @@
 /* Landing Page */
 @import "../components/pages/landing/landing";
 
+/* About Page */
+@import "../components/pages/about_page/about_page";
+
 /* Column Cards */
 @import '../components/card_row/card_row';
 @import '../components/card_row/card/card';
@@ -48,4 +51,10 @@ body {
 	margin: 0px;
 	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
+}
+
+/* Scrolling Container for momentum scrolling needs set height */
+#scrollingContainer {
+	height: 100%;
+	width: 100%;
 }
