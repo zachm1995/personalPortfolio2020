@@ -1,7 +1,6 @@
-/* NavigationToggle.jsx */
+/* NavMenuToggle.jsx */
 
 .navigation-toggle {
-	display: none;
 	width: 60px;
 	height: 20px;
 	z-index: 10;
@@ -13,6 +12,7 @@
 	& > span {
 		display: block;
 		transition: 1.5s;
+		background-color: blue;
 		&:nth-child(1),
 		&:nth-child(2),
 		&:nth-child(3) {
@@ -36,7 +36,7 @@
 			top: 100%;
 		}
 	}
-	&.active {
+	&--active {
 		width: 35px;
 		height: 35px;
 		& > span {
@@ -62,8 +62,4 @@
 			}
 		}
 	}
-}
-
-@media screen and (max-width: 600px) {
-	
 }

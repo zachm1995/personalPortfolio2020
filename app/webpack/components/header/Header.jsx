@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./navigation/Navigation";
-import NavigationToggle from "./navigation_toggle/NavigationToggle";
 import { useMousePosition } from "../../custom_hooks/useMousePosition"; 
 import { useScreenSize } from "../../custom_hooks/useScreenSize";
 
@@ -26,9 +25,6 @@ export default function Header(props) {
 
 	return (
 		<div className={`header ${headerActive ? "header--active" : ""}`}>
-			<NavigationToggle
-				background={props.background}
-			/>
 			<Navigation
 				toggleNavigation={props.toggleNavigation}
 				active={headerActive}

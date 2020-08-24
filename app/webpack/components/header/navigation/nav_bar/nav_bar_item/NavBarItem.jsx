@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 
-export default function NavigationItem(props) {
+export default function NavBarItem(props) {
 	const [itemActive, setItemActive] = useState(false);
 	const pathname = useLocation().pathname;
 
@@ -16,7 +16,7 @@ export default function NavigationItem(props) {
 	return (
 			<Link
 				className={
-					`navigation-item ${itemActive ? "navigation-item--active " : "hoverable"} ${props.active ? 'animate fade-down-in' : 'animate fade-up-out'} ${props.navItemHover ? 'navigation-item--grey' : ''}`
+					`nav-bar-item ${itemActive ? "nav-bar-item--active " : "hoverable"} ${props.active ? 'animate fade-down-in' : 'animate fade-up-out'} ${props.navItemHover ? 'nav-bar-item--grey' : ''}`
 				}
 				style={{
 					animationDelay: `${props.animationDelay}s`

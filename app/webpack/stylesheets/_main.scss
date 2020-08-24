@@ -22,11 +22,14 @@
 /* Navigation Container */
 @import "../components/header/navigation/navigation";
 
-/* Navigation Toggle */
-@import "../components/header/navigation_toggle/navigation_toggle";
+/* NavMenu Toggle */
+@import "../components/header/navigation/nav_menu_toggle/nav_menu_toggle";
 
-/* Navigation Items */
-@import "../components/header/navigation/navigation_item/navigation_item";
+/* NavBar */
+@import "../components/header/navigation/nav_bar/nav_bar";
+
+/* NavBar Items */
+@import "../components/header/navigation/nav_bar/nav_bar_item/nav_bar_item";
 
 /* Grid */
 @import "../components/grid/grid";

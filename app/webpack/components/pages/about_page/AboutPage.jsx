@@ -90,9 +90,6 @@ export default function AboutPage(props) {
 		}
 
 		setAnimationElements(document.querySelectorAll("[data-animate]"));
-		aboutItems.forEach((item) => {
-			console.log(item.image_url);
-		})
 	}, []);
 
 	return (

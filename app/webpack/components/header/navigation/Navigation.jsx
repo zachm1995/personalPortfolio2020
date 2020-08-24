@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import NavigationItem from "./navigation_item/NavigationItem";
+import { useScreenSize } from "../../../custom_hooks/useScreenSize";
+import NavBar from "./nav_bar/NavBar";
+import NavMenu from "./nav_menu/NavMenu";
+import NavMenuToggle from "./nav_menu_toggle/NavMenuToggle";
 
 export default function Navigation(props) {
 	const [itemHover, setItemHover] = useState(false);
+	const [navBarItems, setNavBarItems] = useState([]);
+	const [navMenuItems, setNavMenuItems] = useState([]);
+	const [mobileNavActive, setMobileNavActive] = useState(false);
+	const screenSize = useScreenSize();
 
 	const navigationItems = [
 		{
@@ -14,28 +21,43 @@ export default function Navigation(props) {
 			link: "/about",
 		},
 		{
+			title: "Projects",
+			link: "/rojects",
+		},
+		{
 			title: "Contact",
 			link: "/contact",
 		},
 	];
 
+	// Places navigation items in navbar or menu depending on available space
+	useEffect(() => {
+		// Defines available space as 80% of vw
+		const availableSpace = screenSize.x * .8;
+		setNavBarItems(navigationItems);
+
+	}, [screenSize]);
+
+	// Handles when user is hovering on a menu item; greys other items
 	const handleItemHover = (state) => {
 		setItemHover(state);
 	}
 
-	const renderNavigationItems = navigationItems.map((item, index) => {
-		return (
-			<NavigationItem
-				key={index}
-				title={item.title}
-				link={item.link}
-				animationDelay={index * 0.2}
-				active={props.active}
-				navItemHover={itemHover}
+	return (
+		<nav className={`navigation`}>
+			<NavBar
+				navBarItems={navBarItems}
+				itemHover={itemHover}
 				handleItemHover={handleItemHover}
+				active={props.active}
 			/>
-		);
-	});
-
-	return <nav className={`navigation`}>{renderNavigationItems}</nav>;
+			<NavMenu />
+			{
+				(navMenuItems.length > 0) ?
+				<NavMenuToggle navMenuItemCount={navMenuItems.length} /> :
+				""
+			}
+			
+		</nav>
+	);
 }

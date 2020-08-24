@@ -10,14 +10,6 @@ import AboutPage from "./pages/about_page/AboutPage";
 import Contact from "./pages/Contact";
 
 export default function App(props) {
-
-	useEffect(() => {
-		if('ontouchstart' in window) {
-			console.log('touch');
-		} else {
-			console.log('nah');
-		}
-	})
 	return (
 		<div className="app">
 			<Background color="black" gradient="true" />
