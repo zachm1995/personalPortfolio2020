@@ -6,7 +6,7 @@ import { useAnimate } from "../../../custom_hooks/useAnimate";
 import Scrollbar from "smooth-scrollbar";
 import { useScreenSize } from "../../../custom_hooks/useScreenSize";
 
-export default function Landing(props) {
+export default function LandingPage(props) {
 	const [animationElements, setAnimationElements] = useState([]);
 	const animation = useAnimate(animationElements);
 	const screenSize = useScreenSize();

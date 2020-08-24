@@ -37,10 +37,13 @@
 
 
 /* Landing Page */
-@import "../components/pages/landing/landing";
+@import "../components/pages/landing_page/landing_page";
 
 /* About Page */
 @import "../components/pages/about_page/about_page";
+
+/* About Page */
+@import "../components/pages/contact_page/contact_page";
 
 /* Column Cards */
 @import '../components/card_row/card_row';
@@ -71,4 +74,21 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
+}
+
+/* Handles 404 component */
+.not-found {
+	@extend .text-title;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	color: $primary-light;
+	text-align: center;
+	& > img {
+		max-width: 100%;
+		margin-bottom: 40px;
+	}
 }

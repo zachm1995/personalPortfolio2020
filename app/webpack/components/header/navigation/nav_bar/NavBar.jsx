@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import NavBarItem from "./nav_bar_item/NavBarItem";
 
 export default function NavBar(props) {
+	const navBarRef = useRef();
+
+	useEffect(() => {
+	}, [])
+
 	const renderNavBarItems = props.navBarItems.map((item, index) => {
 		return (
 			<NavBarItem
@@ -16,5 +21,5 @@ export default function NavBar(props) {
 		);
 	});
 
-	return <div className="nav-bar">{renderNavBarItems}</div>;
+	return <div className="nav-bar" ref={navBarRef}>{renderNavBarItems}</div>;
 }

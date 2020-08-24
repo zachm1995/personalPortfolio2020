@@ -15,7 +15,7 @@ export default function GridItem(props) {
 				backgroundImage: `url(${props.background_image})`
 			}}
 		>
-		<img src={props.image_url} alt="" className="grid-item__image" />
+		<img src={props.image_url} alt={props.image_alt} className="grid-item__image" />
 		<div className="grid-item__title">{props.title}</div>
 		<div className="grid-item__subtitle">{props.subtitle}</div>
 		</div>

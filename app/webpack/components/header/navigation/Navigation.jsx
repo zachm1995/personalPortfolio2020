@@ -20,23 +20,21 @@ export default function Navigation(props) {
 			title: "About",
 			link: "/about",
 		},
-		{
-			title: "Projects",
-			link: "/rojects",
-		},
+		// {
+		// 	title: "Projects",
+		// 	link: "/projects",
+		// },
 		{
 			title: "Contact",
 			link: "/contact",
 		},
 	];
 
-	// Places navigation items in navbar or menu depending on available space
+	// Puts navigation items into NavBar or NavMenu
 	useEffect(() => {
-		// Defines available space as 80% of vw
-		const availableSpace = screenSize.x * .8;
 		setNavBarItems(navigationItems);
-
-	}, [screenSize]);
+		setNavMenuItems(navigationItems);
+	}, [])
 
 	// Handles when user is hovering on a menu item; greys other items
 	const handleItemHover = (state) => {
@@ -53,8 +51,10 @@ export default function Navigation(props) {
 			/>
 			<NavMenu />
 			{
-				(navMenuItems.length > 0) ?
-				<NavMenuToggle navMenuItemCount={navMenuItems.length} /> :
+				(screenSize.x < 760) ?
+				<NavMenuToggle
+					navMenuItems={navMenuItems}
+				/> :
 				""
 			}
 			
