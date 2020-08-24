@@ -14,13 +14,12 @@
 	box-sizing: border-box;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	position: relative;
 	text-align: center;
 	&::after {
 		content: '';
 		background-color: $primary-light;
-		opacity: .75;
+		opacity: .9;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -30,16 +29,19 @@
 	}
 	&__image {
 		height: 200px;
+		max-width: 100%;
 		margin-bottom: 40px;
 	}
 
 	&__title {
 		@extend .text-title;
+		font-family: $font-alt;
 		color: $primary-dark;
 		margin-bottom: 20px;
 	}
 	&__subtitle {
 		@extend .text-subtitle;
+		font-family: $font-alt;
 		color: $primary-dark;
 	}
 }

@@ -6,8 +6,8 @@ export default function GridItem(props) {
 			className="grid-item"
 			data-animate={JSON.stringify({
 				animationName: "fade",
-				animationDirection: "down",
-				animationSpeed: "slow",
+				animationDirection: "left",
+				animationSpeed: "fast",
 				animationOn: ["enter"],
 				reanimate: false,
 			})}
