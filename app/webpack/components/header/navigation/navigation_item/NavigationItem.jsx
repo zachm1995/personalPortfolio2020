@@ -22,7 +22,7 @@ export default function NavigationItem(props) {
 					animationDelay: `${props.animationDelay}s`
 				}}
 				to={props.link}
-				onMouseEnter={() => props.handleItemHover(true)}
+				onMouseEnter={() => itemActive ? "" : props.handleItemHover(true)}
 				onMouseLeave={() => props.handleItemHover(false)}
 			>
 				{props.title}

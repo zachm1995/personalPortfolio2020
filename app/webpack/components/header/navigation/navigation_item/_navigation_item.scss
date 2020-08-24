@@ -5,7 +5,7 @@
 	text-transform: uppercase;
 	color: $primary-light;
 	transition: .8s ease;
-	&:hover {
+	&:hover:not(&--active) {
 		letter-spacing: 2px;
 	}
 	&--active {
