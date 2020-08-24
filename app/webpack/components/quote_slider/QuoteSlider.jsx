@@ -13,6 +13,7 @@ export default function QuoteSlider({ quotes = quoteData, size = 20 }) {
 				{currentQuote.quote.split(" ").map((word, index) => {
 					return (
 						<span
+							key={index}
 							data-animate={JSON.stringify({
 								animationName: "fade",
 								animationDirection: "up",

@@ -47,6 +47,7 @@ export default function Cursor(props) {
 			style={{
 				top: mousePosition["y"] - 10 + "px",
 				left: mousePosition["x"] - 10 + "px",
+				display: `${'ontouchstart' in window ? "none" : "block"}`
 			}}
 		>
 			<div className="cursor__dot"></div>

@@ -21,12 +21,38 @@ body {
 	}
 }
 
-/* Paragraphs */
+/* Title Text */
+.text-title {
+	font-family: $font-main;
+	font-size: 65px;
+}
 
-p {
+/* Subtitle Text */
+.text-subtitle {
+
+}
+
+/* Body Text */
+.text-body {
 	font-family: $font-alt;
 	font-size: 16px;
 }
+
+/* Small Text */
+.text-adorn {
+	font-family: $font-alt;
+	font-size: 16px;
+	text-transform: uppercase;
+	&::before {
+		content: '— ';
+	}
+
+	&::after {
+		content: ' —';
+	}
+}
+
+
 
 /* Links */
 a {
@@ -57,6 +83,10 @@ a {
 			text-transform: uppercase;
 			margin: 0;
 		}
+	}
+
+	.text-title {
+		font-size: 40px;
 	}
 	a {
 		&::after {

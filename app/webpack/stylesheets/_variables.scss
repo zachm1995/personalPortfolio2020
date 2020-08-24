@@ -1,35 +1,15 @@
 /* Colors */
-
-$white: #ffffff;
-$grey: #7f7f7f;
-$grey-dark: #222222;
-$slate: #191919;
-$crimson: #ba2525;
-$transparent: rgba(0, 0, 0, 0);
-$gradient-purple: linear-gradient(
-	280deg,
-	#8e2de2,
-	#191919,
-	#6000ff,
-	#191919,
-	#6441a5,
-	#191919,
-	#2a0845,
-	#191919,
-	#4a00e0
-	);
-$gradient-slate: linear-gradient(
-	280deg,
-	#0A0A0A 0%,
-	#333333 50%,
-	#0A0A0A 100%
-	);
-
+/*
+ * Primary, Acce
+ */
+$primary-dark: #121212;
+$primary-light: #EDFDF6;
+$crimson: #8F0000;
 
 /* Typography */
 
-$font-main: "Raleway", sans-serif;
-$font-alt: "Montserrat", sans-serif;
+$font-main: "Montserrat", sans-serif;
+$font-alt: "Raleway", sans-serif;
 
 /* Animations */
 
@@ -43,8 +23,8 @@ $ease-timing-alt: cubic-bezier(0.5, 0, 0, 1);
 }
 @mixin slate-gradient-background {
 	background: $gradient-slate;
-	// background-size: 4000% 4000%;
-	// animation: gradientAnimation 50s infinite;
+	background-size: 4000% 4000%;
+	animation: gradientAnimation 50s infinite;
 }
 
 @keyframes gradientAnimation {

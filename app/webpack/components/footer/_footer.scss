@@ -1,4 +1,4 @@
-@import 'variables';
+/* Footer.jsx */
 
 .footer-container {
 	width: 100vw;
@@ -7,8 +7,8 @@
 	left: 0;
 	right: 0;
 	height: 100px;
-	background-color: $white;
-	color: $slate;
+	background-color: $primary-light;
+	color: $primary-dark;
 	text-align: center;
 	padding: 20px;
 }

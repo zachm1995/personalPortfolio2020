@@ -8,13 +8,5 @@
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	&--purple {
-		@include purple-gradient-background;
-	}
-	&--slate {
-		@include slate-gradient-background;
-	}
-}
-
-@media only screen and (max-width: 500px) {
+	background-color: $primary-dark;
 }

@@ -1,16 +1,17 @@
 /* QuoteSlider.jsx */
 
 .quote-slider {
-	background-color: white;
-	box-shadow: inset 0px 0px 50px 0px black;
+	background-color: $primary-light;
 	padding: 20vh 10vw;
 	&__title {
-		margin-bottom: 40px;
+		@extend .text-title;
+		margin-bottom: 60px;
 		text-align: center;
 	}
 	&__quote-text {
-		font-family: $font-main;
-		font-size: 5em;
+		@extend .text-body;
+		max-width: 60%;
+		margin: 0 auto;
 		margin-bottom: 20px;
 		position: relative;
 		z-index: 1;
@@ -25,9 +26,8 @@
 		}
 	}
 	&__author {
-		font-family: $font-alt;
-		font-size: 4em;
-		text-align: right;
+		@extend .text-adorn;
+		text-align: center;
 	}
 }
 

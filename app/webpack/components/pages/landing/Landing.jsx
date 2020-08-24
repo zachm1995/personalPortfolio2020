@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import QuoteSlider from '../../quote_slider/QuoteSlider';
+import QuoteSlider from "../../quote_slider/QuoteSlider";
 import CardRow from "../../card_row/CardRow";
 import Typed from "react-typed";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
@@ -40,10 +40,10 @@ export default function Landing(props) {
 	useEffect(() => {
 		if (screenSize.x > 760) {
 			Scrollbar.init(scrollbarRef.current, {
-				damping: 0.05
+				damping: 0.05,
 			});
 		}
-		
+
 		setAnimationElements(document.querySelectorAll("[data-animate]"));
 	}, []);
 
@@ -51,8 +51,8 @@ export default function Landing(props) {
 		<div className="landing">
 			<div id="scrollingContainer" ref={scrollbarRef}>
 				<div className="landing__centered-box">
-					<div
-						className={`hoverable`}
+					<h1
+						className={`landing__main-title hoverable`}
 						data-animate={JSON.stringify({
 							animationName: "fade",
 							animationDirection: "down",
@@ -62,14 +62,24 @@ export default function Landing(props) {
 						})}
 					>
 						Zach Mumbauer
-					</div>
-					<div>
+					</h1>
+					<h6
+						className="landing__sub-title"
+						data-animate={JSON.stringify({
+							animationName: "fade",
+							animationDirection: "down",
+							animationSpeed: "slow",
+							animationOn: ["enter"],
+							reanimate: true,
+						})}
+					>
 						<Typed
 							strings={["Tech-centric pantologist"]}
 							typeSpeed={30}
 							startDelay={1000}
+							showCursor={false}
 						/>
-					</div>
+					</h6>
 				</div>
 				<QuoteSlider />
 				<CardRow data={projects} />

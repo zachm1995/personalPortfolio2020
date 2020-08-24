@@ -51,7 +51,9 @@
 @import "./scss_toolkit/scrollbar";
 @import "./light_and_elegant/main";
 @import "./dark_and_stormy/main";
-@import "./footer";
+
+/* Footer */
+@import "../components/footer/footer";
 
 /* Reset body */
 
