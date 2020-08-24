@@ -16,8 +16,9 @@ export default function Grid(props) {
 				title={item.title}
 				subtitle={item.subtitle}
 				description={item.description}
-				image={item.image_url}
+				image_url={item.image_url}
 				image_alt={item.image_alt}
+				background_image={item.background_image}
 			/>
 		);
 	});

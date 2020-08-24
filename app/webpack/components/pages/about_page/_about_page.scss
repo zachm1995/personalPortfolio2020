@@ -1,8 +1,17 @@
 /* AboutPage.jsx */
 
 .about-page {
-	padding-top: 100px;
-	&__title {
+	height: 100vh;
+	width: 100vw;
+	&__professional-title {
+		@extend .text-title;
+		margin-top: 100px;
+		color: white;
+		text-align: center;
+	}
+	&__personal-title {
+		@extend .text-title;
+		margin-top: 100px;
 		color: white;
 		text-align: center;
 	}

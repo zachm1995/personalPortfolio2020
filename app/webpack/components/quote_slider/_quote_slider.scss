@@ -3,6 +3,7 @@
 .quote-slider {
 	background-color: $primary-light;
 	padding: 20vh 10vw;
+	box-sizing: border-box;
 	&__quote-text {
 		@extend .text-title;
 		margin: 0 auto;

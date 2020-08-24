@@ -11,6 +11,18 @@ export default function GridItem(props) {
 				animationOn: ["enter"],
 				reanimate: false,
 			})}
-		></div>
+			style={{
+				backgroundImage: `url(${props.background_image})`
+			}}
+		>
+		<img src={props.image_url} alt="" className="grid-item__image" />
+		<div className="grid-item__title">{props.title}</div>
+		<div className="grid-item__subtitle">{props.subtitle}</div>
+		</div>
 	);
 }
+				// title={item.title}
+				// subtitle={item.subtitle}
+				// description={item.description}
+				// image={item.image_url}
+				// image_alt={item.image_alt}

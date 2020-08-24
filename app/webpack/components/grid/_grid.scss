@@ -1,7 +1,13 @@
 /* Grid.jsx */
 
 .grid {
-	display: grid;	
-	grid-template-columns: repeat(4, auto);
-	grid-template-rows: auto;
+	display: grid;
+	justify-content: space-evenly;
+	place-items: center;
+	padding: 20vh 10vw;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+	gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
 }
