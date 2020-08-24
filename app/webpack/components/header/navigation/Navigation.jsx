@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import NavigationItem from "./navigation_item/NavigationItem";
 
 export default function Navigation(props) {
+	const [itemHover, setItemHover] = useState(false);
+
 	const navigationItems = [
 		{
 			title: "Home",
@@ -17,6 +19,10 @@ export default function Navigation(props) {
 		},
 	];
 
+	const handleItemHover = (state) => {
+		setItemHover(state);
+	}
+
 	const renderNavigationItems = navigationItems.map((item, index) => {
 		return (
 			<NavigationItem
@@ -25,6 +31,8 @@ export default function Navigation(props) {
 				link={item.link}
 				animationDelay={index * 0.2}
 				active={props.active}
+				navItemHover={itemHover}
+				handleItemHover={handleItemHover}
 			/>
 		);
 	});

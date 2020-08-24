@@ -4,7 +4,10 @@
 	@extend .text-body;
 	text-transform: uppercase;
 	color: $primary-light;
-
+	transition: .8s ease;
+	&:hover {
+		letter-spacing: 2px;
+	}
 	&--active {
 		color: $crimson;
 		&:hover {
@@ -12,5 +15,8 @@
 				width: 0px;
 			}
 		}
+	}
+	&--grey:not(&--active):not(:hover) {
+		color: transparentize($primary-light, .8);
 	}
 }

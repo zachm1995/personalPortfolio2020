@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import QuoteSlider from "../../quote_slider/QuoteSlider";
-import CardRow from "../../card_row/CardRow";
+import Timeline from "../../timeline/Timeline";
 import Typed from "react-typed";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
 import Scrollbar from "smooth-scrollbar";
@@ -82,9 +82,7 @@ export default function Landing(props) {
 					</h6>
 				</div>
 				<QuoteSlider />
-				<CardRow data={projects} />
-				<CardRow data={projects} />
-				<CardRow data={projects} />
+				<Timeline />
 			</div>
 		</div>
 	);
