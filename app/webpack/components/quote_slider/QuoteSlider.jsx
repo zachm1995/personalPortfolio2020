@@ -8,7 +8,6 @@ export default function QuoteSlider({ quotes = quoteData, size = 20 }) {
 
 	return (
 		<div className="quote-slider">
-			<h2 className="quote-slider__title">Words I live by</h2>
 			<div className="quote-slider__quote-text">
 				{currentQuote.quote.split(" ").map((word, index) => {
 					return (

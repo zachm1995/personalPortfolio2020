@@ -1,12 +1,12 @@
 /* NavigationItem.scss */
 
 .navigation-item {
-	font-size: 1.3em;
-	font-family: $font-alt;
+	@extend .text-body;
 	text-transform: uppercase;
-	color: white;
+	color: $primary-light;
+
 	&--active {
-		color: red;
+		color: $crimson;
 		&:hover {
 			&::after {
 				width: 0px;

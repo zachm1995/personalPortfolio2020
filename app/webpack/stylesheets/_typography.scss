@@ -24,7 +24,7 @@ body {
 /* Title Text */
 .text-title {
 	font-family: $font-main;
-	font-size: 65px;
+	font-size: 55px;
 }
 
 /* Subtitle Text */
@@ -41,7 +41,7 @@ body {
 /* Small Text */
 .text-adorn {
 	font-family: $font-alt;
-	font-size: 16px;
+	font-size: 14px;
 	text-transform: uppercase;
 	&::before {
 		content: '— ';
@@ -75,6 +75,18 @@ a {
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	/* Title Text */
+	.text-title {
+		font-family: $font-main;
+		font-size: 40px;
+	}
+
+	/* Subtitle Text */
+	.text-subtitle {
+	}
+}
+
 @media screen and (max-width: 760px) {
 	@for $i from 1 through 6 {
 		h#{$i} {
@@ -86,7 +98,7 @@ a {
 	}
 
 	.text-title {
-		font-size: 40px;
+		font-size: 25px;
 	}
 	a {
 		&::after {

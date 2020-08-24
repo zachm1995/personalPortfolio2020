@@ -19,6 +19,7 @@ a:hover {
 	left: 0;
 	border: 2px solid $primary-light;
 	transition: transform 1s;
+	background-color: $primary-dark;
 	&__dot {
 		width: 20%;
 		height: 20%;
@@ -34,6 +35,9 @@ a:hover {
 		background-color: $primary-light;
 		border-color: $primary-dark;
 		transform: scale(1.5);
+		.cursor__dot {
+			background-color: $primary-dark;
+		}
 	}
 
 	&--click {
