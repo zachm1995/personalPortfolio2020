@@ -9,6 +9,12 @@ import AboutPage from "./pages/about_page/AboutPage";
 import ContactPage from "./pages/contact_page/ContactPage";
 
 export default function App(props) {
+
+	useEffect(() => {
+		let vh = window.innerHeight * .01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}, [])
+
 	return (
 		<div className="app">
 			<Background color="black" gradient="true" />

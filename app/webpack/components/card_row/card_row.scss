@@ -4,7 +4,8 @@
 	padding: 50px 20px;
 	background: white;
 	&__title {
-		margin-bottom: 40px;
+		@extend .text-title;
+		margin-bottom: 80px;
 		text-align: center;
 	}
 	&__cards-container {

@@ -18,7 +18,7 @@ export default function CardRow(props) {
 
 	return (
 		<div className="card-row">
-			<h1 className="card-row__title">{props.title}</h1>
+			<div className="card-row__title">{props.title}</div>
 			<div className="card-row__cards-container">{renderCards}</div>
 		</div>
 	);

@@ -105,7 +105,8 @@ export default function LandingPage(props) {
 						image_url: LinkedIn,
 						link: "https://www.linkedin.com/in/zachmum/"
 					}
-				]} />
+				]}
+				title="Some of my work" />
 				<Footer />
 			</div>
 		</div>
