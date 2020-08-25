@@ -1,6 +1,6 @@
 /* Landing.jsx */
 
-.landing {
+.landing-page {
 	height: 100vh;
 
 	width: 100vw;
@@ -24,5 +24,11 @@
 		@extend .text-adorn;
 		color: $primary-light;
 		text-align: center;
+	}
+	&__technologies {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+		height: 30vh;
+		background-color: blue;
 	}
 }

@@ -1,0 +1,18 @@
+/* Technologies.jsx */
+
+.technologies {
+	padding: 10vh 5vw;
+	background-color: $crimson;
+	color: white;
+	&__title {
+		@extend .text-title;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+		gap: 1rem;
+		grid-row-gap: 10rem;
+	}
+}

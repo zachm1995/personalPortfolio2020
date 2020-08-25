@@ -6,6 +6,8 @@ import Typed from "react-typed";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
 import Scrollbar from "smooth-scrollbar";
 import { useScreenSize } from "../../../custom_hooks/useScreenSize";
+import Technologies from "../../technologies/Technologies";
+
 import SkedgeLogo from "../../../images/landing_page/skedge.svg"
 import LinkedIn from "../../../images/landing_page/linkedin.png"
 import CodePen from "../../../images/landing_page/codepen.png"
@@ -52,11 +54,11 @@ export default function LandingPage(props) {
 	}, []);
 
 	return (
-		<div className="landing">
+		<div className="landing-page">
 			<div id="scrollingContainer" ref={scrollbarRef}>
-				<div className="landing__centered-box">
+				<div className="landing-page__centered-box">
 					<h1
-						className={`landing__main-title hoverable`}
+						className={`landing-page__main-title hoverable`}
 						data-animate={JSON.stringify({
 							animationName: "fade",
 							animationDirection: "down",
@@ -68,7 +70,7 @@ export default function LandingPage(props) {
 						Zach Mumbauer
 					</h1>
 					<h6
-						className="landing__sub-title"
+						className="landing-page__sub-title"
 						data-animate={JSON.stringify({
 							animationName: "fade",
 							animationDirection: "down",
@@ -107,6 +109,7 @@ export default function LandingPage(props) {
 					}
 				]}
 				title="Some of my work" />
+				<Technologies />
 				<Footer />
 			</div>
 		</div>

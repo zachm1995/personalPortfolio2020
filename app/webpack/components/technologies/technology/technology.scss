@@ -1,0 +1,14 @@
+/* Technology.jsx */
+
+.technology {
+	&__image {
+		display: block;
+		height: 150px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	&__name {
+		@extend .text-subtitle;
+		text-align: center;
+	}
+}
