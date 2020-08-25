@@ -88,6 +88,8 @@ export default function LandingPage(props) {
 					</h6>
 				</div>
 				<QuoteSlider />
+
+				<Technologies />
 				<CardRow data={[
 					{
 						title: "CodePen",
@@ -109,7 +111,6 @@ export default function LandingPage(props) {
 					}
 				]}
 				title="Some of my work" />
-				<Technologies />
 				<Footer />
 			</div>
 		</div>

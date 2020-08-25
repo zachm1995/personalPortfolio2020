@@ -11,8 +11,10 @@
 	}
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 1rem;
-		grid-row-gap: 10rem;
+		grid-row-gap: 5rem;
+
 	}
 }
