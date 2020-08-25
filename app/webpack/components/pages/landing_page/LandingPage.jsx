@@ -18,30 +18,6 @@ export default function LandingPage(props) {
 	const screenSize = useScreenSize();
 	const scrollbarRef = useRef();
 
-	const [projects, setProjects] = useState([
-		{
-			title: "Wholsum",
-			description:
-				"A web application that logs comprehensive data on whole foods and visualizes the data.",
-			image_url:
-				"https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-		},
-		{
-			title: "Coronavirus Dashboard",
-			description:
-				"A react frontend that displays covid-19 data from the CDC api using D3.js data visualization.",
-			image_url:
-				"https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-		},
-		{
-			title: "Title",
-			description:
-				"This is a description. As such, the amount of text is quite long but I don't think it will get much longer than this.",
-			image_url:
-				"https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-		},
-	]);
-
 	// Sets animation elements for the page
 	useEffect(() => {
 		if (screenSize.x > 760) {
@@ -66,7 +42,6 @@ export default function LandingPage(props) {
 							animationOn: ["enter"],
 							reanimate: true,
 						})}
-						onClick={() => alert("hi")}
 					>
 						Zach Mumbauer
 					</h1>
