@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import QuoteSlider from "../../quote_slider/QuoteSlider";
 import CardRow from "../../card_row/CardRow";
+import Footer from "../../footer/Footer";
 import Typed from "react-typed";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
 import Scrollbar from "smooth-scrollbar";
@@ -105,6 +106,7 @@ export default function LandingPage(props) {
 						link: "https://www.linkedin.com/in/zachmum/"
 					}
 				]} />
+				<Footer />
 			</div>
 		</div>
 	);

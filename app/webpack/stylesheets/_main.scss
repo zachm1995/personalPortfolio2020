@@ -35,6 +35,9 @@
 @import "../components/grid/grid";
 @import "../components/grid/grid_item/grid_item";
 
+/* Social Box */
+@import "../components/social_box/social_box";
+@import "../components/social_box/social_box_item/social_box_item";
 
 /* Landing Page */
 @import "../components/pages/landing_page/landing_page";
@@ -58,7 +61,6 @@
 /* Resume */
 @import '../components/resume/resume';
 
-@import "./about";
 @import "./contact";
 @import "./scss_toolkit/scrollbar";
 @import "./light_and_elegant/main";
