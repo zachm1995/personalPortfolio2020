@@ -24,10 +24,10 @@ export default function Navigation(props) {
 		// 	title: "Projects",
 		// 	link: "/projects",
 		// },
-		{
-			title: "Contact",
-			link: "/contact",
-		},
+		// {
+		// 	title: "Contact",
+		// 	link: "/contact",
+		// },
 	];
 
 	// Puts navigation items into NavBar or NavMenu

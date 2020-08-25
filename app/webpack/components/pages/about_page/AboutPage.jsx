@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useAnimate } from "../../../custom_hooks/useAnimate";
 import Scrollbar from "smooth-scrollbar";
 import { useScreenSize } from "../../../custom_hooks/useScreenSize";
-import Grid from "../../grid/Grid";4
+import Grid from "../../grid/Grid";
+import Footer from "../../footer/Footer";
 
 // Import Icons
 import UnitedStatesTravelMap from "images/about_page/travel_map.svg";
@@ -98,6 +99,7 @@ export default function AboutPage(props) {
 				<div className="about-page__professional-title"></div>
 				<div className="about-page__personal-title">On a personal note...</div>
 				<Grid data={aboutItems} />
+				<Footer />
 			</div>
 		</div>
 	);

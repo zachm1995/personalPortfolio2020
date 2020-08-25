@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Background from "./background/Background";
 import Header from "./header/Header";
 import LandingPage from "./pages/landing_page/LandingPage";
-import Footer from "./footer/Footer";
-import Background from "./background/Background";
 import Cursor from "./cursor/Cursor";
 import AboutPage from "./pages/about_page/AboutPage";
 import ContactPage from "./pages/contact_page/ContactPage";
