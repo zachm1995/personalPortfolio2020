@@ -2,19 +2,15 @@ import React, { useState, useEffect } from "react";
 import Card from "./card/Card";
 
 export default function CardRow(props) {
-	const [cardData, setCardData] = useState(props.data);
 
-	useEffect(() => {
-		setCardData(props.data);
-	}, [props])
-
-	const renderCards = cardData.map((card, index) => {
+	const renderCards = props.data.map((card, index) => {
 		return (
 			<Card
 				key={index}
 				title={card.title}
 				description={card.description}
 				image_url={card.image_url}
+				link={card.link}
 				animationDelay={index * 0.2}
 			/>
 		);

@@ -1,24 +1,38 @@
 /* Card.jsx */
 
 .card {
-	font-family: $font-main;
 	color: white;
 	height: 350px;
 	width: 275px;
 	background-color: black;
 	margin: 0 20px;
 	box-shadow: 0px 0px 20px 0px black;
+	border-radius: 20px;
+
+	/* Removes default link underline */
+	&:after {
+		display: none;
+	}
 	&__image-container {
+		height: 40%;
+		background-color: white;
+		padding: 15px;
+		box-sizing: border-box;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
 	}
 	&__image {
-		width: 100%;
+		display: block;
+		height: 100%;
+		max-width: 100%;
+		margin: 0 auto;
 	}
 	&__title {
+		@extend .text-subtitle;
 		padding: 20px;
 	}
 	&__description {
-		font-family: $font-alt;
-		font-size: 1em;
+		@extend .text-body;
 		padding: 20px;
 		padding-top: 0;
 	}
