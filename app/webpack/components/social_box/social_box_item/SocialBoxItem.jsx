@@ -7,12 +7,10 @@ export default function SocialBoxItem(props) {
 			target="_blank"
 			className="social-box-item hoverable"
 		>
-			<div
-				style={{
-					mask: `url(${props.icon})`,
-				}}
+			<img
+				src={props.icon}
 				className="social-box-item__icon"
-			></div>
+			></img>
 		</a>
 	);
 }
