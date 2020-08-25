@@ -38,7 +38,7 @@ export default function QuoteSlider({ quotes = quoteData, size = 20 }) {
 					reanimate: false,
 				})}
 				style={{
-					animationDelay: '1s'
+					animationDelay: `${currentQuote.quote.split(" ").length * .2}s`
 				}}
 				>{currentQuote.author}</div>
 		</div>
