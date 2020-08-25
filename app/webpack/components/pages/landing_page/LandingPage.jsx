@@ -8,9 +8,9 @@ import Scrollbar from "smooth-scrollbar";
 import { useScreenSize } from "../../../custom_hooks/useScreenSize";
 import Technologies from "../../technologies/Technologies";
 
-import SkedgeLogo from "../../../images/landing_page/skedge.svg"
-import LinkedIn from "../../../images/landing_page/linkedin.png"
-import CodePen from "../../../images/landing_page/codepen.png"
+import SkedgeLogo from "../../../images/landing_page/skedge.svg";
+import LinkedIn from "../../../images/landing_page/linkedin.png";
+import CodePen from "../../../images/landing_page/codepen.png";
 
 export default function LandingPage(props) {
 	const [animationElements, setAnimationElements] = useState([]);
@@ -66,10 +66,11 @@ export default function LandingPage(props) {
 							animationOn: ["enter"],
 							reanimate: true,
 						})}
+						onClick={() => alert("hi")}
 					>
 						Zach Mumbauer
 					</h1>
-					<h6
+					<div
 						className="landing-page__sub-title"
 						data-animate={JSON.stringify({
 							animationName: "fade",
@@ -85,32 +86,36 @@ export default function LandingPage(props) {
 							startDelay={1000}
 							showCursor={false}
 						/>
-					</h6>
+					</div>
 				</div>
 				<QuoteSlider />
 
 				<Technologies />
-				<CardRow data={[
-					{
-						title: "CodePen",
-						description: "Check out some of my projects",
-						image_url: CodePen,
-						link: "https://codepen.io/zach_mumbauer"
-					},
-					{
-						title: "Skedge",
-						description: "A Ruby on Rails application to manage employee shift scheduling.",
-						image_url: SkedgeLogo,
-						link: "https://github.com/zachm1995/skedge"
-					},
-					{
-						title: "LinkedIn",
-						description: "Learn about my work experience and educational background",
-						image_url: LinkedIn,
-						link: "https://www.linkedin.com/in/zachmum/"
-					}
-				]}
-				title="Some of my work" />
+				<CardRow
+					data={[
+						{
+							title: "CodePen",
+							description: "Check out some of my projects",
+							image_url: CodePen,
+							link: "https://codepen.io/zach_mumbauer",
+						},
+						{
+							title: "Skedge",
+							description:
+								"A Ruby on Rails application to manage employee shift scheduling.",
+							image_url: SkedgeLogo,
+							link: "https://github.com/zachm1995/skedge",
+						},
+						{
+							title: "LinkedIn",
+							description:
+								"Learn about my work experience and educational background",
+							image_url: LinkedIn,
+							link: "https://www.linkedin.com/in/zachmum/",
+						},
+					]}
+					title="Some of my work"
+				/>
 				<Footer />
 			</div>
 		</div>
