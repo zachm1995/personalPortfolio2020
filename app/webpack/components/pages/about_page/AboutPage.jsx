@@ -73,13 +73,13 @@ export default function AboutPage(props) {
 			image_alt: "an EMT symbol",
 			background_image: FirstAid,
 		},
-		{
-			title: "I like disruption",
-			subtitle: "I've worked at four start-ups",
-			image_url: CodeIcon,
-			image_alt: "a symbol for coding",
-			background_image: Code,
-		},
+		// {
+		// 	title: "I like disruption",
+		// 	subtitle: "I've worked at four start-ups",
+		// 	image_url: CodeIcon,
+		// 	image_alt: "a symbol for coding",
+		// 	background_image: Code,
+		// },
 	];
 
 	// Sets animation elements for the page
